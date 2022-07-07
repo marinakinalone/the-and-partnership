@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="ad.size" content="width=980, height=300">
+    <title>Lexus NO DCO</title>
+
+    <script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+    <script src="https://s0.2mdn.net/ads/studio/cached_libs/gsap_3.5.1_min.js"></script>
+
+<style>
+
+@font-face {
+    font-family: 'Nobel';
+    src: url('Nobel-Regular.eot');
+    src: local('Nobel Regular'), local('Nobel-Regular'),
+        url('https://s0.2mdn.net/creatives/assets/3762485/Nobel-Regular.eot?#iefix') format('embedded-opentype'),
+        url('https://s0.2mdn.net/creatives/assets/3762485/Nobel-Regular.woff2') format('woff2'),
+        url('https://s0.2mdn.net/creatives/assets/3762485/Nobel-Regular.woff') format('woff'),
+        url('https://s0.2mdn.net/creatives/assets/3762485/Nobel-Regular.ttf') format('truetype'),
+        url('https://s0.2mdn.net/creatives/assets/3762485/Nobel-Regular.svg#Nobel-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nobel Book';
+    src: url('Nobel-Book.eot');
+    src: local('Nobel Book'), local('Nobel-Book'),
+        url('https://s0.2mdn.net/creatives/assets/3762485/Nobel-Book.eot?#iefix') format('embedded-opentype'),
+        url('https://s0.2mdn.net/creatives/assets/3762485/Nobel-Book.woff2') format('woff2'),
+        url('https://s0.2mdn.net/creatives/assets/3762485/Nobel-Book.woff') format('woff'),
+        url('https://s0.2mdn.net/creatives/assets/3762485/Nobel-Book.ttf') format('truetype'),
+        url('https://s0.2mdn.net/creatives/assets/3762485/Nobel-Book.svg#Nobel-Book') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#ad{
+    color:#000;
+    background-color: #fff;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#border{
+    border: solid 1px #000;
+    width: 978px;
+    height: 298px;
+}
+
+.size{
+	width:980px;
+	height:300px;
+	top:0px;
+	left:0px;
+}
+
+.pos {
+    position: absolute;
+}
+
+#logo {
+    position: absolute;
+    width: 185px;
+    height: auto;
+    right: 0px;
+    bottom: 0px;
+}
+
+#logo path {
+    fill: rgba(0, 0, 0, 0);
+}
+
+#container {
+    top: 10px;
+    left: 10px;
+    width: 300px;
+    height: auto;
+}
+
+#preHeadline {
+    font-family: 'Nobel Book';
+    font-size: 15px;
+    margin-bottom: 1px;
+    opacity: 0;
+}
+
+.line {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#line_top {
+    height: 1px;
+    margin-bottom: 10px;
+    opacity: 0;
+    width: inherit;
+}
+
+#headline {
+    font-family: Nobel;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 2px;
+    opacity: 0;
+}
+
+#line_bottom {
+    height: 1px;
+    opacity: 0;
+    margin-bottom: 1px;
+    width: inherit;
+}
+
+#cta {
+    display: none;
+    font-family: 'Nobel Book';
+    font-size: 12px;
+
+    margin-top: 5px;
+    opacity: 0;
+}
+
+#cta::after {
+  content: " >";
+}
+
+#carimage {
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 540px;
+    height: 230px;
+    left: 350px;
+    bottom: 30px;
+}
+
+#legal{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-family: 'Nobel Book';
+    font-size: 9px;
+    line-height: 11px;
+    letter-spacing: 0.03em;
+    max-width: 620px;
+    vertical-align:bottom;
+    z-index:1;
+}
+
+</style>
+</head>
+
+<body>
+    <div id="ad" class="size pos">
+        <div id="backgroundImage" class="pos size"></div>
+        <div id="carimage">
+        </div>
+        <div id="container" class="pos">
+            <div id="preHeadline"></div>
+            <div id="line_top" class="line"></div>
+            <div id="headline"></div>
+            <div id="line_bottom" class="line"></div>
+            <div id="cta"></div>
+        </div>
+            <div id="legal"></div>
+   <svg id="logo" data-name="2D Tagline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560.15 173.49"><defs><style>.cls-1{fill:#222720;}</style></defs><title>Artboard 3</title><g id="_Grupp_" data-name="&lt;Grupp&gt;"><g id="_Grupp_2" data-name="&lt;Grupp&gt;"><g id="_Grupp_3" data-name="&lt;Grupp&gt;"><g id="_Grupp_4" data-name="&lt;Grupp&gt;"><g id="_Grupp_5" data-name="&lt;Grupp&gt;"><g id="_Grupp_6" data-name="&lt;Grupp&gt;"><path id="_Bana_" data-name="&lt;Bana&gt;" class="cls-1" d="M128.74,23.7l-2.61,3.92c17.49,7.19,24.55,20.25,24.55,34.24,0,7-1.89,13.32-5.58,13.32H99.26C93,75.17,91.16,73,94,67.4c5-9.89,20-28.82,29.3-40.21,1.35-1.67,2.46-4.28-2.4-5.58s-13-1.88-19.82-1.88c-34.48,0-58.51,18.65-58.51,42.68,0,22.12,20.84,42.78,58.43,42.78,16.61,0,37-4.67,48.53-17.76h-10C128.28,97.59,113.59,99.91,101,99.91c-30.33,0-49.53-15.75-49.53-37.5,0-20.06,21.73-38.07,49.15-38.07,3.28,0,4.35.71.88,5-7,8.71-19.54,26-25.42,36.06C69.82,76.23,76.25,85,90.42,85h57.35c3.54,0,5.56-2,7.62-5.68a34.84,34.84,0,0,0,4.24-16.94C159.63,46.11,147.4,31.12,128.74,23.7Z"/></g></g></g></g><g id="_Grupp_7" data-name="&lt;Grupp&gt;"><g id="_Grupp_8" data-name="&lt;Grupp&gt;"><g id="_Grupp_9" data-name="&lt;Grupp&gt;"><g id="_Grupp_10" data-name="&lt;Grupp&gt;"><g id="_Grupp_11" data-name="&lt;Grupp&gt;"><path id="_Stansad_bana_" data-name="&lt;Stansad bana&gt;" class="cls-1" d="M503,59.27H464.09c1.26-5,5.13-8.39,12.37-8.39h37.21V42.52H474.11c-22.55,0-27.92,16-27.92,25.09h48.17c6.61,0,6.61,8.91.23,8.91l-53.25,0v-34h-16v34H398.7c-7.13,0-10.13-3.42-10.13-8.71,0-6.37,0-25.31,0-25.31H362.87L339.91,57l-19.8-14.46h-57c-16.49,0-28.21,9.63-29.57,21.68h10.7a24.82,24.82,0,0,0-9.46,12.42H201.14c-6.35,0-9.32-3.31-9.32-9.52V42.52h-16.1v20.9C175.73,76.7,183,85,199.29,85H311.61l23.07-14.54L354.57,85h23.72L347.42,62.48,372.5,46.69V70.58C372.5,78,382.09,85,390.83,85H503.06C522.56,85,522.45,59.27,503,59.27ZM308.73,76.62H254.22c.56-4.56,2.92-9.09,10.35-9.09h33.79V59.22h-45c.78-3.44,4.28-8.33,12.38-8.33h35.74V46.27L327.17,65Z"/></g></g></g></g></g></g></g><path class="cls-1" d="M176.58,131V112.09h10.56v2.43h-8v6H187V123h-7.79v5.56h8.46V131Z"/><path class="cls-1" d="M206.21,131,202,124.54c-.31-.47-.8-1.32-.8-1.32s-.49.83-.85,1.37L196.15,131h-3l6.55-10-5.8-8.93h3.18l3.62,5.59c.29.44.6,1,.6,1a11.88,11.88,0,0,1,.62-1l3.65-5.54h3l-5.77,8.8L209.34,131Z"/><path class="cls-1" d="M222,123.56H218.4V131h-2.59V112.09h5.67c3.83,0,6.18,2.54,6.18,5.82A5.8,5.8,0,0,1,222,123.56Zm-.88-9H218.4v6.6h2.85c2.17,0,3.73-1.22,3.73-3.36S223.5,114.53,221.09,114.53Z"/><path class="cls-1" d="M234.57,131V112.09h10.56v2.43h-8v6H245V123h-7.79v5.56h8.46V131Z"/><path class="cls-1" d="M264.28,131l-7.63-8.82V131h-2.59V112.09h6.11a5.55,5.55,0,0,1,5.85,5.56,5.47,5.47,0,0,1-5.38,5.41l7,7.92Zm-4.58-16.46h-3.05V121h3a3.27,3.27,0,1,0,.05-6.5Z"/><path class="cls-1" d="M274.81,131V112.09h2.59V131Z"/><path class="cls-1" d="M286.48,131V112.09H297v2.43h-8v6h7.79V123h-7.79v5.56h8.46V131Z"/><path class="cls-1" d="M318.78,131l-9.91-13.69-.34-.52s.05.41.05.62V131H306V112.09h2.2L318,125.52a5.3,5.3,0,0,1,.34.54,6.21,6.21,0,0,1-.05-.62V112.09h2.59V131Z"/><path class="cls-1" d="M337,131.29a9.45,9.45,0,0,1-9.26-9.76c0-5.46,3.93-9.76,9.37-9.76a8.43,8.43,0,0,1,7,2.95l-1.91,1.71a6.71,6.71,0,0,0-5-2.12c-3.67,0-6.73,2.85-6.73,7.17a6.9,6.9,0,0,0,6.62,7.27,7.26,7.26,0,0,0,5.54-2.61l1.86,1.6A9.1,9.1,0,0,1,337,131.29Z"/><path class="cls-1" d="M351.12,131V112.09h10.56v2.43h-8v6h7.79V123h-7.79v5.56h8.46V131Z"/><path class="cls-1" d="M390.53,131l-2.28-6.11h-6L379.95,131H377.2l7.25-18.89h1.66L393.4,131Zm-5.15-13.82c-.08-.21-.16-.52-.16-.52s-.08.31-.13.49l-2,5.3h4.22Z"/><path class="cls-1" d="M415.42,131v-13.9a6.5,6.5,0,0,1,.05-.72,3.38,3.38,0,0,1-.26.44l-5.93,8h-1l-6-7.79a3.93,3.93,0,0,1-.26-.41,5.67,5.67,0,0,1,.05.7V131h-2.59V112.09h2.2l7.12,9.24,6.91-9.24H418V131Z"/><path class="cls-1" d="M437.42,131l-2.28-6.11h-6L426.83,131h-2.74l7.25-18.89H433l7.3,18.89Zm-5.15-13.82c-.08-.21-.16-.52-.16-.52s-.08.31-.13.49l-2,5.3h4.22Z"/><path class="cls-1" d="M449.32,128.08a2.53,2.53,0,0,1-.31.39s.31,0,.54,0H459V131H444.53l9.89-15.89c.16-.23.36-.49.36-.49s-.28,0-.54,0h-8.07v-2.54h13.17Z"/><path class="cls-1" d="M466.32,131V112.09h2.59V131Z"/><path class="cls-1" d="M490.75,131l-9.91-13.69-.34-.52s.05.41.05.62V131H478V112.09h2.2l9.78,13.43a5.5,5.5,0,0,1,.34.54,6.21,6.21,0,0,1-.05-.62V112.09h2.59V131Z"/><path class="cls-1" d="M508.6,131.29a9.69,9.69,0,0,1-9.57-9.76,9.46,9.46,0,0,1,9.6-9.76,9.92,9.92,0,0,1,7,2.56L514,116.26a7.88,7.88,0,0,0-5.43-1.94c-3.8,0-6.86,2.87-6.86,7.25a7.18,7.18,0,0,0,7,7.19,5.55,5.55,0,0,0,5.56-3.8h-5.69v-2.43h8.69A8.67,8.67,0,0,1,508.6,131.29Z"/></svg>
+        <div id="border" class="pos size"></div>
+</div>
+<script>
+
+var data = {};
+var containerWidth;
+var copy1 = true;
+var moveLogo = false;
+
+// ANIMATION WITH TWO MESSAGES, see function politeInit
+
+const delayTime = 0.5 //default is 5
+
+function startAnimation_Ad_message_2(lineWidth, line2Width) {
+    tl = new TimelineMax({ repeat:1, onComplete: endAnimation_Ad_message_2, onCompleteParams: [lineWidth, line2Width]})
+    console.log('current ad message: ' + data.Admessage_2[0])
+    tl.set('#preHeadline, #headline, #cta, .line', { opacity:0})
+        .set('#headline', { y: 5 })
+        .add(function(){headline.innerHTML = data.headline})
+        .set('.line', { width: 0, opacity: 1 })
+        .to('#preHeadline', 1, { opacity: 1, delay: 1 })
+        .to('#line_top, #line_bottom', 0.7, { width: lineWidth, delay: 0.2 })
+        .to('#headline', 0.3, { opacity: 1, y: 0, delay: '-0.1' })
+        .to('#cta', 0.5, { opacity: 1, delay: 0.5 })
+        .to('#headline', 0.5, { opacity: 0, y: 0, delay: delayTime})
+
+        .add(function(){headline.innerHTML = data.Admessage_2[0]})
+        .set('#headline', { y: 5 })
+        .to('#line_top, #line_bottom', 0.5, { width: line2Width})
+        .to('#headline', 0.3, { opacity: 1, y: 0 })
+
+    //WIP
+        .to('#headline', 0.5, { opacity: 0, y: 0, delay: delayTime})
+
+        .add(function(){headline.innerHTML = data.Admessage_2[1]})
+        //.set('#headline', { y: 5 })
+        .to('#line_top, #line_bottom', 0.5, { width: "400px"}) // change length here
+        .to('#headline', 0.3, { opacity: 1, y: 0 })
+
+
+    // END
+        .to('#preHeadline, #headline, .line, #cta', 0.5, { opacity: 0, delay: delayTime})
+}
+
+function endAnimation_Ad_message_2(lineWidth, line2Width){
+    tl2 = new TimelineMax()
+    tl2.set('#preHeadline, #headline, #cta, .line', { opacity:0})
+        .set('#headline', { y: 5 })
+        .add(function(){headline.innerHTML = data.headline})
+        .set('.line', { width: 0, opacity: 1 })
+        .to('#preHeadline', 1, { opacity: 1, delay: 1 })
+        .to('#line_top, #line_bottom', 0.7, { width: lineWidth, delay: 0.2 })
+        .to('#headline', 0.3, { opacity: 1, y: 0, delay: '-0.1' })
+        .to('#cta', 0.5, { opacity: 1, delay: 0.5 })
+        .to('#headline', 0.5, { opacity: 0, y: 0, delay:3})
+        .add(function(){headline.innerHTML = data.Admessage_2[1]})
+        .set('#headline', { y: 5 })
+        .to('#line_top, #line_bottom', 0.5, { width: line2Width})
+        .to('#headline', 0.3, { opacity: 1, y: 0 })
+    // data.Admessage_2.shift();
+    // console.log("left messages: " + data.Admessage_2)
+}
+
+// ANIMATION WITH ON MESSAGE, see politeInit
+function startAnimation(lineWidth) {
+    tl = new TimelineMax({ repeat: 1, onComplete: endAnimation, onCompleteParams:[lineWidth]})
+    tl.set('#preHeadline, #headline, #cta, .line', { opacity: 0 })
+    tl.set('#headline', { y: 5 })
+        .set('.line', { width: 0, opacity: 1 })
+        .to('#preHeadline', .5, { opacity: 1, delay: 1 })
+        .to('#line_top, #line_bottom', .7, { width: lineWidth, delay: .2 })
+        .to('#headline', 0.3, { opacity: 1, y: 0, delay: -.1 })
+        .to('#cta', .5, { opacity: 1, delay: .5 })
+        .to('#preHeadline, #headline, .line, #cta', 0.5, { opacity: 0, delay: 5 })
+}
+
+function endAnimation(lineWidth) {
+    tl2 = new TimelineMax()
+    tl2.set('#preHeadline, #headline, #cta, .line', { opacity: 0 })
+    tl2.set('#headline', { y: 5 })
+        .set('.line', { width: 0, opacity: 1 })
+        .to('#preHeadline', .5, { opacity: 1, delay: 1 })
+        .to('#line_top, #line_bottom', .7, { width: lineWidth, delay: .2 })
+        .to('#headline', 0.3, { opacity: 1, y: 0, delay: -.1 })
+        .to('#cta', .5, { opacity: 1, delay: .5 })
+}
+
+if (Enabler.isInitialized()) {
+    init();
+} else {
+    Enabler.addEventListener(studio.events.StudioEvent.INIT, init);
+}
+
+// Runs when Enabler is ready.
+function init() {
+    console.log("init")
+    var devDynamicContent = {};
+    //Spreadsheet connection to Dynamic feed: use Profile Id for dataset - Mark out when developing, set when live
+    // Dynamic varibles for Development, not used live
+    devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting = [{}];
+    devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].Unique_ID = 4;
+    devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].Reporting_Label = "Default";
+    devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].Reporting_Label_1 = "dafault";
+    devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].pageLoadModelId = "default";
+    devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].Segment_ID = "default";
+    devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].CreativeSize = "980x300"
+    devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].preHeadline = "LEXUS NX 300h";
+    devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].headline = "VÅR MEST POPULÆRE SUV"
+    devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].fontSizeAdjust = 0
+    devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].headlineWidth = ""
+    devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].Admessage_2 = ["FRA 3 890 I MÅNEDEN", "A VERY COOL CAR"]
+    devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].Admessage_2_line_width = "200px"
+
+
+
+    // devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].fontSizeAdjust = 0
+    // devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].Admessage_2_line_width = ""
+    // devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].Admessage_2 = "HELLO WORLD"
+    // const message = devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].Admessage_2
+
+    // devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].Admessage_2_line_width = `${message.length} - 4 em`
+
+    devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].cta = "TIL BILKONFIGURATOREN"
+    devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].legal = "NX 300h. Startleie/etableringsgebyr kr 115 490,-. Fastrente 3 år 1,95%. Total periode 36 md. og kjørelengde 45 000 km. Totalpris kr 255 530,-. Gjelder til 31.12.20."
+    devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].elementsColor = "#fff"
+    devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].colorBottom = "#232640"
+    devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].colorTop = "#595B69"
+    devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].imageSrc = {};
+    devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].imageSrc.Url = "https://s0.2mdn.net/creatives/assets/3881271/NX300h_day-exterior-32_1H9_LB52_980x300.png"
+    devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].Exit_URL = {}
+    devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].Exit_URL.Url = "https://www.lexus.no/car-models/nx/build/?utm_source=xaxis&utm_medium=display&utm_campaign=dco_ao_retargeting&utm_content=nx-300h"
+    devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].Default = "FALSE"
+    devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].Active = "TRUE"	
+    Enabler.setDevDynamicContent(devDynamicContent);
+
+    // Acctual Dynamic conntent connection, used when uploaded to DCS.
+    // data = dynamicContent.Retargeting[0];
+    data = devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0];
+
+//Get html elements
+var container = document.getElementById('container');
+var preHeadline = document.getElementById("preHeadline");
+var headline = document.getElementById("headline");
+var cta = document.getElementById("cta");
+var carImage = document.getElementById("carimage");
+var backgroundImage = document.getElementById("backgroundImage");
+var lines = document.querySelectorAll('.line');
+var ad = document.getElementById('ad');
+var logo = document.getElementById("logo");
+var legal = document.getElementById('legal');
+
+//Add dynamic varblies
+var elementColor = data.elementsColor;
+var adjustSize = data.fontSizeAdjust;
+var bottomColor = data.colorBottom;
+var topColor = data.colorTop;
+var containerWidth = container.offsetWidth + data.headlineWidth
+var Admessage_2_line_width = data.Admessage_2_line_width;
+
+preHeadline.innerHTML = data.preHeadline
+headline.innerHTML = data.headline
+var fontSizeheadline = parseInt(window.getComputedStyle(headline, null).getPropertyValue('font-size'), 10);
+console.log(fontSizeheadline)
+cta.innerHTML = data.cta
+legal.innerHTML = data.legal;
+backgroundImage.style.backgroundImage = "url(" + data.imageSrc.Url + ")";
+container.style.width = containerWidth + 'px';
+
+//Hide elements if no dynamic data
+displayIfDynamicContent(data.cta, cta)
+displayIfDynamicContent(data.legal, legal)
+
+/* SET DYNAMIC COLOR OF AD ELEMENTS FROM elementColor */  
+
+ad.style.color = elementColor;
+//loop lines to set dynamic color
+for(var i=0; i<lines.length; i++){
+    lines[i].style.backgroundColor = elementColor
+}
+//loop all SVG paths in the logo to set color
+var paths = logo.querySelectorAll('.cls-1');
+for(var i=0; i<paths.length; i++){
+    paths[i].style.fill = elementColor;
+}
+
+//Adjust font size using dynamic input fontSizeAdjust
+headline.style.fontSize = (fontSizeheadline + adjustSize) + 'px';
+headline.style.lineHeight = (fontSizeheadline + adjustSize) + 'px';
+console.log((fontSizeheadline + adjustSize) + 'px')
+
+/* BACKGROUND AND COLORS */
+ad.style.backgroundColor = bottomColor;
+
+var colorOne = hexToRgbA(bottomColor) + '0%';
+var colorTwo = hexToRgbA(topColor) + ' 100%';
+ad.style.backgroundImage = 'linear-gradient(0deg , ' + colorOne + ', ' + colorTwo + ')';
+
+/* EXIT URL */
+var exitURL = data.Exit_URL.Url;
+ad.addEventListener('click', exitClickHandler, false);
+
+function exitClickHandler() {
+Enabler.exitOverride("clickTag", exitURL);
+}
+
+// Change logo position based on legal height
+if(legal.offsetHeight > 0){
+    //Check i logo should move up to give room for legal text
+    if(moveLogo === true){
+    var legalHeight = legal.offsetTop;
+    var adHeight = ad.offsetHeight;
+    var logoBottomPosition = (adHeight - legalHeight);
+    logo.style.bottom = logoBottomPosition;
+    }
+}
+
+if (Enabler.isPageLoaded()) {
+    console.log(containerWidth + " " +Admessage_2_line_width)
+    politeInit(containerWidth ,Admessage_2_line_width);  
+} else {
+    Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED, function(){
+        politeInit(containerWidth ,Admessage_2_line_width);  
+    });
+}
+};
+
+// Runs when the page is completely loaded.
+function politeInit(containerWidth, Admessage_2_line_width) {
+console.log("polite init")
+// Add your code to hide any loading image or animation and load creative
+// assets or begin creative animation.
+
+/* ONCE ALL DATA IS LOADED CHECK IF THE BANNER HAS ONE OR TWO MESSAGES */
+//Run if only 1 message
+if(data.Admessage_2 === ""){
+    console.log('empty')
+    console.log(containerWidth)
+    startAnimation(containerWidth)
+}
+//Run if only 2 messages
+else{
+    console.log('contains')
+    console.log(containerWidth)
+    //! redeclare containerWidth
+    //var Ad_message_1_line_width = "'" + containerWidth + "'px"
+    startAnimation_Ad_message_2(containerWidth, Admessage_2_line_width)
+}
+};
+
+/* FUNCTIONS */
+
+function displayIfDynamicContent(dynamicValue, element){
+if (dynamicValue === '') {
+    element.style.display = 'none';
+}
+else {
+    element.style.display = 'block';
+}
+}
+
+function hexToRgbA(hex) {
+var c;
+if (/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)) {
+    c = hex.substring(1).split('');
+    if (c.length == 3) {
+        c = [c[0], c[0], c[1], c[1], c[2], c[2]];
+    }
+    c = '0x' + c.join('');
+    return 'rgba(' + [(c >> 16) & 255, (c >> 8) & 255, c & 255].join(',') + ',1)';
+}
+}
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
