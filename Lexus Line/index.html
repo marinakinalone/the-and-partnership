@@ -195,10 +195,8 @@ const adMessages = [{
 
 const delayTime = 0.5 //default is 5
 
-function startAnimation_Ad_message_2(lineWidth) {
-    //repeat parameter is 1 by default
-    tl = new TimelineMax({ repeat:0, onComplete: endAnimation_Ad_message_2, onCompleteParams: [lineWidth,  data.Admessage_2[data.Admessage_2.length - 1].lineWidth]})
-    tl.set('#preHeadline, #headline, #cta, .line', { opacity:0})
+function adAnimation (timeline, ads, lineWidth) {
+    timeline.set('#preHeadline, #headline, #cta, .line', { opacity:0})
         .set('#headline', { y: 5 })
         .add(function(){headline.innerHTML = data.headline})
         .set('.line', { width: 0, opacity: 1 })
@@ -206,47 +204,28 @@ function startAnimation_Ad_message_2(lineWidth) {
         .to('#line_top, #line_bottom', 0.7, { width: lineWidth, delay: 0.2 })
         .to('#headline', 0.3, { opacity: 1, y: 0, delay: '-0.1' })
         .to('#cta', 0.5, { opacity: 1, delay: 0.5 })
-        .to('#headline', 0.5, { opacity: 0, y: 0, delay: delayTime})
-
-        .add(function(){headline.innerHTML = data.Admessage_2[0].content})
-        .set('#headline', { y: 5 })
-        .to('#line_top, #line_bottom', 0.5, { width: data.Admessage_2[0].lineWidth})
-        .to('#headline', 0.3, { opacity: 1, y: 0 })
-
-    //WIP
-        .to('#headline', 0.5, { opacity: 0, y: 0, delay: delayTime})
-
-        .add(function(){headline.innerHTML = data.Admessage_2[1].content})
-        .to('#line_top, #line_bottom', 0.5, { width: data.Admessage_2[1].lineWidth})
-        .to('#headline', 0.3, { opacity: 1, y: 0 })
-
-
-    // END
-        .to('#preHeadline, #headline, .line, #cta', 0.5, { opacity: 0, delay: delayTime})
+    if (ads.length > 1) {
+        ads.map(adMessage => {
+            timeline.to('#headline', 0.5, { opacity: 0, y: 0, delay: delayTime})
+            .add(function(){headline.innerHTML = adMessage.content})
+            .set('#headline', { y: 5 })
+            .to('#line_top, #line_bottom', 0.5, { width: adMessage.lineWidth})
+            .to('#headline', 0.3, { opacity: 1, y: 0 })
+        })
+    }
 }
 
-function endAnimation_Ad_message_2(lineWidth, line2Width){
-    tl2 = new TimelineMax()
-    tl2.set('#preHeadline, #headline, #cta, .line', { opacity:0})
-        .set('#headline', { y: 5 })
-        .add(function(){headline.innerHTML = data.headline})
-        .set('.line', { width: 0, opacity: 1 })
-        .to('#preHeadline', 1, { opacity: 1, delay: 1 })
-        .to('#line_top, #line_bottom', 0.7, { width: lineWidth, delay: 0.2 })
-        .to('#headline', 0.3, { opacity: 1, y: 0, delay: '-0.1' })
-        .to('#cta', 0.5, { opacity: 1, delay: 0.5 })
-        .to('#headline', 0.5, { opacity: 0, y: 0, delay: 3})
-        .add(function(){headline.innerHTML = data.Admessage_2[0].content})
-        .set('#headline', { y: 5 })
-        .to('#line_top, #line_bottom', 0.5, { width: data.Admessage_2[0].lineWidth})
-        .to('#headline', 0.3, { opacity: 1, y: 0 })
+function startAnimation_Ad_message_2(lineWidth) {
+    //repeat parameter is 1 by default
+    const ads = data.Admessage_2
+    tl = new TimelineMax({ repeat:0, onComplete: endAnimation_Ad_message_2, onCompleteParams: [lineWidth,  ads]})
+    adAnimation(tl, ads, lineWidth)
+    tl.to('#preHeadline, #headline, .line, #cta', 0.5, { opacity: 0, delay: delayTime})
+}
 
-        //WIP
-        .to('#headline', 0.5, { opacity: 0, y: 0, delay: delayTime})
-        .add(function(){headline.innerHTML = data.Admessage_2[1].content})
-        .to('#line_top, #line_bottom', 0.5, { width: data.Admessage_2[1].lineWidth})
-        .to('#headline', 0.3, { opacity: 1, y: 0 })
-        // END
+function endAnimation_Ad_message_2(lineWidth, ads){
+    tl2 = new TimelineMax()
+    adAnimation(tl2, ads, lineWidth)
 }
 
 // ANIMATION WITH ON MESSAGE, see politeInit
