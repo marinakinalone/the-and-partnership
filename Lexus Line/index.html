@@ -183,7 +183,10 @@ var copy1 = true;
 var moveLogo = false;
 
 // ADD NEW MESSAGES BELOW WITH THE LINE WIDTH
-const adMessages = [{
+const adHeadlines = [{
+    content: "VÅR MEST POPULÆRE SUV",
+    lineWidth: ""
+    },{
     content: "FRA 3 890 I MÅNEDEN",
     lineWidth: "200px"
     }, {
@@ -193,32 +196,34 @@ const adMessages = [{
 
 // ANIMATION WITH TWO MESSAGES, see function politeInit
 
-const delayTime = 0.5 //default is 5
+const delayTime = 5 //default is 5
 
 function adAnimation (timeline, ads, lineWidth) {
     timeline.set('#preHeadline, #headline, #cta, .line', { opacity:0})
         .set('#headline', { y: 5 })
-        .add(function(){headline.innerHTML = data.headline})
+        .add(function(){headline.innerHTML = ads[0].content})
         .set('.line', { width: 0, opacity: 1 })
         .to('#preHeadline', 1, { opacity: 1, delay: 1 })
-        .to('#line_top, #line_bottom', 0.7, { width: lineWidth, delay: 0.2 })
+        .to('#line_top, #line_bottom', 0.7, { width: ads[0].lineWidth, delay: 0.2 })
         .to('#headline', 0.3, { opacity: 1, y: 0, delay: '-0.1' })
         .to('#cta', 0.5, { opacity: 1, delay: 0.5 })
     if (ads.length > 1) {
-        ads.map(adMessage => {
-            timeline.to('#headline', 0.5, { opacity: 0, y: 0, delay: delayTime})
-            .add(function(){headline.innerHTML = adMessage.content})
-            .set('#headline', { y: 5 })
-            .to('#line_top, #line_bottom', 0.5, { width: adMessage.lineWidth})
-            .to('#headline', 0.3, { opacity: 1, y: 0 })
+        ads.map((adMessage, index) => {
+            if (index !== 0) {
+                timeline.to('#headline', 0.5, { opacity: 0, y: 0, delay: delayTime})
+                .add(function(){headline.innerHTML = adMessage.content})
+                .set('#headline', { y: 5 })
+                .to('#line_top, #line_bottom', 0.5, { width: adMessage.lineWidth})
+                .to('#headline', 0.3, { opacity: 1, y: 0 })
+            }
         })
     }
 }
 
 function startAnimation_Ad_message_2(lineWidth) {
-    //repeat parameter is 1 by default
-    const ads = data.Admessage_2
-    tl = new TimelineMax({ repeat:0, onComplete: endAnimation_Ad_message_2, onCompleteParams: [lineWidth,  ads]})
+    const ads = data.headline
+    ads[0].lineWidth = lineWidth
+    tl = new TimelineMax({ repeat:1, onComplete: endAnimation_Ad_message_2, onCompleteParams: [lineWidth,  ads]})
     adAnimation(tl, ads, lineWidth)
     tl.to('#preHeadline, #headline, .line, #cta', 0.5, { opacity: 0, delay: delayTime})
 }
@@ -272,10 +277,9 @@ function init() {
     devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].Segment_ID = "default";
     devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].CreativeSize = "980x300"
     devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].preHeadline = "LEXUS NX 300h";
-    devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].headline = "VÅR MEST POPULÆRE SUV"
+    devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].headline = adHeadlines
     devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].fontSizeAdjust = 0
     devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].headlineWidth = ""
-    devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].Admessage_2 = adMessages
     devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].cta = "TIL BILKONFIGURATOREN"
     devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].legal = "NX 300h. Startleie/etableringsgebyr kr 115 490,-. Fastrente 3 år 1,95%. Total periode 36 md. og kjørelengde 45 000 km. Totalpris kr 255 530,-. Gjelder til 31.12.20."
     devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].elementsColor = "#fff"
@@ -311,7 +315,6 @@ var adjustSize = data.fontSizeAdjust;
 var bottomColor = data.colorBottom;
 var topColor = data.colorTop;
 var containerWidth = container.offsetWidth + data.headlineWidth
-// var Admessage_2_line_width = data.Admessage_2_line_width;
 
 preHeadline.innerHTML = data.preHeadline
 headline.innerHTML = data.headline
@@ -342,7 +345,6 @@ for(var i=0; i<paths.length; i++){
 //Adjust font size using dynamic input fontSizeAdjust
 headline.style.fontSize = (fontSizeheadline + adjustSize) + 'px';
 headline.style.lineHeight = (fontSizeheadline + adjustSize) + 'px';
-console.log((fontSizeheadline + adjustSize) + 'px')
 
 /* BACKGROUND AND COLORS */
 ad.style.backgroundColor = bottomColor;
@@ -371,7 +373,6 @@ if(legal.offsetHeight > 0){
 }
 
 if (Enabler.isPageLoaded()) {
-    // console.log(containerWidth + " " +Admessage_2_line_width)
     politeInit(containerWidth);  
 } else {
     Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED, function(){
@@ -388,7 +389,7 @@ console.log("polite init")
 
 /* ONCE ALL DATA IS LOADED CHECK IF THE BANNER HAS ONE OR TWO MESSAGES */
 //Run if only 1 message
-if(data.Admessage_2 === ""){
+if(data.headline === ""){
     console.log('empty')
     console.log(containerWidth)
     startAnimation(containerWidth)
@@ -397,7 +398,6 @@ if(data.Admessage_2 === ""){
 else{
     console.log('contains')
     console.log(containerWidth)
-    //! redeclare containerWidth
     //var Ad_message_1_line_width = "'" + containerWidth + "'px"
     startAnimation_Ad_message_2(containerWidth)
 }
