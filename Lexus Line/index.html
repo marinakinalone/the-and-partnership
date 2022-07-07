@@ -235,10 +235,10 @@ function endAnimation_Ad_message_2(lineWidth, line2Width){
         .to('#line_top, #line_bottom', 0.7, { width: lineWidth, delay: 0.2 })
         .to('#headline', 0.3, { opacity: 1, y: 0, delay: '-0.1' })
         .to('#cta', 0.5, { opacity: 1, delay: 0.5 })
-        .to('#headline', 0.5, { opacity: 0, y: 0, delay:3})
+        .to('#headline', 0.5, { opacity: 0, y: 0, delay: 3})
         .add(function(){headline.innerHTML = data.Admessage_2[0].content})
         .set('#headline', { y: 5 })
-        .to('#line_top, #line_bottom', 0.5, { width: line2Width})
+        .to('#line_top, #line_bottom', 0.5, { width: data.Admessage_2[0].lineWidth})
         .to('#headline', 0.3, { opacity: 1, y: 0 })
 
         //WIP
@@ -297,7 +297,6 @@ function init() {
     devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].fontSizeAdjust = 0
     devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].headlineWidth = ""
     devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].Admessage_2 = adMessages
-    devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].Admessage_2_line_width = "200px"
     devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].cta = "TIL BILKONFIGURATOREN"
     devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].legal = "NX 300h. Startleie/etableringsgebyr kr 115 490,-. Fastrente 3 år 1,95%. Total periode 36 md. og kjørelengde 45 000 km. Totalpris kr 255 530,-. Gjelder til 31.12.20."
     devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].elementsColor = "#fff"
@@ -333,7 +332,7 @@ var adjustSize = data.fontSizeAdjust;
 var bottomColor = data.colorBottom;
 var topColor = data.colorTop;
 var containerWidth = container.offsetWidth + data.headlineWidth
-var Admessage_2_line_width = data.Admessage_2_line_width;
+// var Admessage_2_line_width = data.Admessage_2_line_width;
 
 preHeadline.innerHTML = data.preHeadline
 headline.innerHTML = data.headline
@@ -393,17 +392,17 @@ if(legal.offsetHeight > 0){
 }
 
 if (Enabler.isPageLoaded()) {
-    console.log(containerWidth + " " +Admessage_2_line_width)
-    politeInit(containerWidth ,Admessage_2_line_width);  
+    // console.log(containerWidth + " " +Admessage_2_line_width)
+    politeInit(containerWidth);  
 } else {
     Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED, function(){
-        politeInit(containerWidth ,Admessage_2_line_width);  
+        politeInit(containerWidth);  
     });
 }
 };
 
 // Runs when the page is completely loaded.
-function politeInit(containerWidth, Admessage_2_line_width) {
+function politeInit(containerWidth) {
 console.log("polite init")
 // Add your code to hide any loading image or animation and load creative
 // assets or begin creative animation.
@@ -421,7 +420,7 @@ else{
     console.log(containerWidth)
     //! redeclare containerWidth
     //var Ad_message_1_line_width = "'" + containerWidth + "'px"
-    startAnimation_Ad_message_2(containerWidth, Admessage_2_line_width)
+    startAnimation_Ad_message_2(containerWidth)
 }
 };
 
