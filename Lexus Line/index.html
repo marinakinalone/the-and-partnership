@@ -182,13 +182,22 @@ var containerWidth;
 var copy1 = true;
 var moveLogo = false;
 
+// ADD NEW MESSAGES BELOW WITH THE LINE WIDTH
+const adMessages = [{
+    content: "FRA 3 890 I MÅNEDEN",
+    lineWidth: "200px"
+    }, {
+    content: "OUR MOST POPULAR SUV",
+    lineWidth: "265px"
+    }]
+
 // ANIMATION WITH TWO MESSAGES, see function politeInit
 
 const delayTime = 0.5 //default is 5
 
-function startAnimation_Ad_message_2(lineWidth, line2Width) {
-    tl = new TimelineMax({ repeat:1, onComplete: endAnimation_Ad_message_2, onCompleteParams: [lineWidth, line2Width]})
-    console.log('current ad message: ' + data.Admessage_2[0])
+function startAnimation_Ad_message_2(lineWidth) {
+    //repeat parameter is 1 by default
+    tl = new TimelineMax({ repeat:0, onComplete: endAnimation_Ad_message_2, onCompleteParams: [lineWidth,  data.Admessage_2[data.Admessage_2.length - 1].lineWidth]})
     tl.set('#preHeadline, #headline, #cta, .line', { opacity:0})
         .set('#headline', { y: 5 })
         .add(function(){headline.innerHTML = data.headline})
@@ -199,17 +208,16 @@ function startAnimation_Ad_message_2(lineWidth, line2Width) {
         .to('#cta', 0.5, { opacity: 1, delay: 0.5 })
         .to('#headline', 0.5, { opacity: 0, y: 0, delay: delayTime})
 
-        .add(function(){headline.innerHTML = data.Admessage_2[0]})
+        .add(function(){headline.innerHTML = data.Admessage_2[0].content})
         .set('#headline', { y: 5 })
-        .to('#line_top, #line_bottom', 0.5, { width: line2Width})
+        .to('#line_top, #line_bottom', 0.5, { width: data.Admessage_2[0].lineWidth})
         .to('#headline', 0.3, { opacity: 1, y: 0 })
 
     //WIP
         .to('#headline', 0.5, { opacity: 0, y: 0, delay: delayTime})
 
-        .add(function(){headline.innerHTML = data.Admessage_2[1]})
-        //.set('#headline', { y: 5 })
-        .to('#line_top, #line_bottom', 0.5, { width: "400px"}) // change length here
+        .add(function(){headline.innerHTML = data.Admessage_2[1].content})
+        .to('#line_top, #line_bottom', 0.5, { width: data.Admessage_2[1].lineWidth})
         .to('#headline', 0.3, { opacity: 1, y: 0 })
 
 
@@ -228,12 +236,17 @@ function endAnimation_Ad_message_2(lineWidth, line2Width){
         .to('#headline', 0.3, { opacity: 1, y: 0, delay: '-0.1' })
         .to('#cta', 0.5, { opacity: 1, delay: 0.5 })
         .to('#headline', 0.5, { opacity: 0, y: 0, delay:3})
-        .add(function(){headline.innerHTML = data.Admessage_2[1]})
+        .add(function(){headline.innerHTML = data.Admessage_2[0].content})
         .set('#headline', { y: 5 })
         .to('#line_top, #line_bottom', 0.5, { width: line2Width})
         .to('#headline', 0.3, { opacity: 1, y: 0 })
-    // data.Admessage_2.shift();
-    // console.log("left messages: " + data.Admessage_2)
+
+        //WIP
+        .to('#headline', 0.5, { opacity: 0, y: 0, delay: delayTime})
+        .add(function(){headline.innerHTML = data.Admessage_2[1].content})
+        .to('#line_top, #line_bottom', 0.5, { width: data.Admessage_2[1].lineWidth})
+        .to('#headline', 0.3, { opacity: 1, y: 0 })
+        // END
 }
 
 // ANIMATION WITH ON MESSAGE, see politeInit
@@ -283,18 +296,8 @@ function init() {
     devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].headline = "VÅR MEST POPULÆRE SUV"
     devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].fontSizeAdjust = 0
     devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].headlineWidth = ""
-    devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].Admessage_2 = ["FRA 3 890 I MÅNEDEN", "A VERY COOL CAR"]
+    devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].Admessage_2 = adMessages
     devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].Admessage_2_line_width = "200px"
-
-
-
-    // devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].fontSizeAdjust = 0
-    // devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].Admessage_2_line_width = ""
-    // devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].Admessage_2 = "HELLO WORLD"
-    // const message = devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].Admessage_2
-
-    // devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].Admessage_2_line_width = `${message.length} - 4 em`
-
     devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].cta = "TIL BILKONFIGURATOREN"
     devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].legal = "NX 300h. Startleie/etableringsgebyr kr 115 490,-. Fastrente 3 år 1,95%. Total periode 36 md. og kjørelengde 45 000 km. Totalpris kr 255 530,-. Gjelder til 31.12.20."
     devDynamicContent.Lexus_NO_DCOFeeds_2020_Retargeting[0].elementsColor = "#fff"
@@ -335,7 +338,7 @@ var Admessage_2_line_width = data.Admessage_2_line_width;
 preHeadline.innerHTML = data.preHeadline
 headline.innerHTML = data.headline
 var fontSizeheadline = parseInt(window.getComputedStyle(headline, null).getPropertyValue('font-size'), 10);
-console.log(fontSizeheadline)
+console.log("fontSideHeadline: " + fontSizeheadline)
 cta.innerHTML = data.cta
 legal.innerHTML = data.legal;
 backgroundImage.style.backgroundImage = "url(" + data.imageSrc.Url + ")";
