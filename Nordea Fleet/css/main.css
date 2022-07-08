@@ -7,6 +7,7 @@
 
 .page {
   background-color: pink;
+  color: #FFFFFF;
 }
 
 .banner {
@@ -27,10 +28,56 @@
   src: url("//db.onlinewebfonts.com/t/22bbdd53424bef8a0c11fde5ed420f5f.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/22bbdd53424bef8a0c11fde5ed420f5f.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/22bbdd53424bef8a0c11fde5ed420f5f.woff") format("woff"), url("//db.onlinewebfonts.com/t/22bbdd53424bef8a0c11fde5ed420f5f.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/22bbdd53424bef8a0c11fde5ed420f5f.svg#Nordea Sans Small") format("svg");
 }
 
+.banner__btn {
+  font-family: "Nordea Sans Small", sans-serif;
+  font-size: 10px;
+  text-align: center;
+  color: #0000A0;
+  background-color: #FFFFFF;
+  border: none;
+  border-radius: 17px;
+  position: absolute;
+  top: 319px;
+  left: 256px;
+  width: 70px;
+  height: 19px;
+}
+
+.banner__cta {
+  position: absolute;
+  top: 256px;
+  left: 72px;
+  width: 436px;
+  height: 60px;
+}
+
+.cta__headline {
+  line-height: 30px;
+  font-size: 22px;
+  text-align: center;
+  font-family: "Nordea Sans Large Bold", sans-serif;
+  font-weight: 900;
+}
+
 .footer__img {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.footer__info {
+  position: absolute;
+  top: 377px;
+  left: 4px;
+  width: 372px;
+  height: 20px;
+}
+
+.info__text {
+  font-size: 7px;
+  font-family: "Nordea Sans Small", sans-serif;
+  line-height: 10px;
+  letter-spacing: 0px;
 }
 
 .img__bubble {
