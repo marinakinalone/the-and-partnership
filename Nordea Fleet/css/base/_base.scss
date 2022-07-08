@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.page {
+    background-color: pink;
+}
+
+.banner {
+    background-color: $brand_color_main;
+    width: $banner_width;
+    height: $banner_height;
+}

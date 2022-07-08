@@ -1,0 +1,61 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Nordea Fleet Banner</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="ad.size" content="width=580,height=400">
+
+  <link rel="stylesheet" href="css/main.css">
+
+  <script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+</head>
+
+<body class="page" id="ad" onclick="">
+    <main class="banner">
+        <div banner__img>
+            <img class="img__bubble" src="./img/copy1.png" alt="name of the car and price to rent it" >
+            <img class="img__main" src="./img/bil1.jpg" alt="an electric car" >
+        </div>
+        <div banner__cta>
+            <p class="cta__headline-1">Lease en elektrisk varebil til din bedrift. </p>
+            <p class="cta__headline-2">Nå til kampanjepris!</p>
+            <button type="button" class="cta__btn" onclick="">Les mer</button>
+        </div>
+        <footer class="footer">
+            <img class="footer__img" src="./img/nordealogo.png" alt="nordea logo">
+            <p class="footer__description-1">Inklusive frakt, lev. og reg.omk Oslo, Månedspris fra 3 199 kr. Etableringsgebyr: 1 990 kr.</p>
+            <p class="footer__description-2">Totalpris: 265 931 kr vil variere med rentenivået. Priseksempel 5 års leasing: Startleie 72 001 kr / 60 mnd. / 100 000 km</p>      
+        </footer>
+    </main>
+    <script type="text/javascript">
+        if (!Enabler.isInitialized()) {
+          Enabler.addEventListener(
+            studio.events.StudioEvent.INIT,
+            enablerInitialized);
+        } else {
+           enablerInitialized();
+        }
+        function enablerInitialized() {
+          // Enabler initialized.
+          // In App ads are rendered offscreen so animation should wait for
+          // the visible event. These are simulated with delays in the local
+          // environment.
+          if (!Enabler.isVisible()) {
+            Enabler.addEventListener(
+              studio.events.StudioEvent.VISIBLE,
+              adVisible);
+          } else {
+             adVisible();
+          }
+        }
+        function adVisible() {
+          // Ad visible, start ad/animation.
+        }
+        </script>
+
+</body>
+
+</html>
