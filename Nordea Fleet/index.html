@@ -7,22 +7,23 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="ad.size" content="width=580,height=400">
-
+  
   <link rel="stylesheet" href="css/main.css">
-
+  
   <script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+
 </head>
 <!-- <svg xmlns="http://www.w3.org/2000/svg" width="180.432" height="183.443" viewBox="0 0 180.432 183.443">
-  <g id="Artwork_2" data-name="Artwork 2" transform="translate(90.216 91.722) rotate(-110)">
-    <path id="Path_140" data-name="Path 140" d="M.078,107.268C-.429,81.736,3.524,57.191,16.256,34.58A68.64,68.64,0,0,1,143.93,59.993c4.412,32.79-18.964,61.947-46.265,72.976-14.792,5.976-30.353,6.877-45.961,6.321a259.57,259.57,0,0,1-42.577-5.545c-10.241-1.815-8.993-1.815-9.11-11.517C-.043,117.25.078,112.256.078,107.268Z" transform="translate(-72.234 -69.715)" fill="#ffe183"/>
-  </g>
+    <g id="Artwork_2" data-name="Artwork 2" transform="translate(90.216 91.722) rotate(-110)">
+        <path id="Path_140" data-name="Path 140" d="M.078,107.268C-.429,81.736,3.524,57.191,16.256,34.58A68.64,68.64,0,0,1,143.93,59.993c4.412,32.79-18.964,61.947-46.265,72.976-14.792,5.976-30.353,6.877-45.961,6.321a259.57,259.57,0,0,1-42.577-5.545c-10.241-1.815-8.993-1.815-9.11-11.517C-.043,117.25.078,112.256.078,107.268Z" transform="translate(-72.234 -69.715)" fill="#ffe183"/>
+    </g>
 </svg>
 -->
 <body class="page" id="ad" onclick="">
     <main class="banner">
         <section class="banner__img">
             <img class="img__bubble" src="./img/copy1.png" alt="name of the car and price to rent it" >
-            <img class="img__main" src="./img/bil1.jpg" alt="an electric car" >
+            <img class="img__main" id="car" alt="an electric car" >
         </section>
         <section class="banner__cta">
             <p class="cta__headline">Lease en elektrisk varebil til din bedrift.</p>
@@ -32,18 +33,21 @@
         <footer class="footer">
             <img class="footer__img" src="./img/nordealogo.png" alt="nordea logo">
             <section class="footer__info">
-                <p class="info__text">Inklusive frakt, lev. og reg.omk Oslo, Månedspris fra 3 199 kr. Etableringsgebyr: 1 990 kr.</p>
-                <p class="info__text">Totalpris: 265 931 kr vil variere med rentenivået. Priseksempel 5 års leasing: Startleie 72 001 kr / 60 mnd. / 100 000 km</p>      
+                <p id="random"></p>
+                <p class="info__text" id="footer-line1"></p>
+                <p class="info__text" id="footer-line2"></p>      
             </section>
         </footer>
     </main>
+    <script type="text/javascript" src="js/getNextState.js"></script>
+
     <script type="text/javascript">
         if (!Enabler.isInitialized()) {
           Enabler.addEventListener(
             studio.events.StudioEvent.INIT,
             enablerInitialized);
         } else {
-           enablerInitialized();
+            enablerInitialized();
         }
         function enablerInitialized() {
           // Enabler initialized.
@@ -52,14 +56,14 @@
           // environment.
           if (!Enabler.isVisible()) {
             Enabler.addEventListener(
-              studio.events.StudioEvent.VISIBLE,
-              adVisible);
-          } else {
-             adVisible();
-          }
+                studio.events.StudioEvent.VISIBLE,
+                adVisible);
+            } else {
+                adVisible();
+            }
         }
         function adVisible() {
-          // Ad visible, start ad/animation.
+            // Ad visible, start ad/animation.
         }
         </script>
 

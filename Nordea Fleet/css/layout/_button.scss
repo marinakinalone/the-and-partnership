@@ -11,4 +11,9 @@
     left: 256px;
     width: 70px;
     height: 19px;
+    &:hover {
+        cursor: pointer;
+        border-color: $brand_color_highlight;
+        background-color: $brand_color_highlight;
+    }
 }

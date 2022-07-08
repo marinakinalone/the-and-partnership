@@ -5,12 +5,8 @@
           box-sizing: border-box;
 }
 
-.page {
-  background-color: pink;
-  color: #FFFFFF;
-}
-
 .banner {
+  color: #FFFFFF;
   background-color: #0000A0;
   width: 580px;
   height: 400px;
@@ -41,6 +37,12 @@
   left: 256px;
   width: 70px;
   height: 19px;
+}
+
+.banner__btn:hover {
+  cursor: pointer;
+  border-color: #FFE183;
+  background-color: #FFE183;
 }
 
 .banner__cta {

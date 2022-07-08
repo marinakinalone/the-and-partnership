@@ -4,12 +4,8 @@
     box-sizing: border-box;
 }
 
-.page {
-    background-color: pink;
-    color: $brand_color_light
-}
-
 .banner {
+    color: $brand_color_light;
     background-color: $brand_color_main;
     width: $banner_width;
     height: $banner_height;
