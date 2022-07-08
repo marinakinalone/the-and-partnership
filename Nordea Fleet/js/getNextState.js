@@ -25,7 +25,7 @@ const displayTime = 5000;
 
 const setImgSrc = (fileName, id) => {
     const element = document.getElementById(id)
-    const url = `./img/` + fileName
+    const url = `./` + fileName
     element.src = url
 }
 
