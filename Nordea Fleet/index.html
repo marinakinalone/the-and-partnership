@@ -1,24 +1,189 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <title>Nordea Fleet Banner</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="ad.size" content="width=580,height=400" />
 
-<head>
-  <meta charset="utf-8">
-  <title>Nordea Fleet Banner</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="ad.size" content="width=580,height=400">
-  
-  <link rel="stylesheet" href="css/main.css">
-  
-  <script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
 
-</head>
+    <script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
 
-<body class="page" id="ad" onclick="">
-    <main class="banner">
-        <section class="banner__img">
-            <img class="img__bubble" id="bubble" alt="" >
-            <!--
+    <style type="text/css">
+      * {
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      .banner {
+        color: #ffffff;
+        background-color: #0000a0;
+        width: 580px;
+        height: 400px;
+      }
+
+      @font-face {
+        font-family: "Nordea Sans Large Bold";
+        src: url("//db.onlinewebfonts.com/t/095df2d8a2d98ea67750c993758df467.eot");
+        src: url("//db.onlinewebfonts.com/t/095df2d8a2d98ea67750c993758df467.eot?#iefix")
+            format("embedded-opentype"),
+          url("//db.onlinewebfonts.com/t/095df2d8a2d98ea67750c993758df467.woff2")
+            format("woff2"),
+          url("//db.onlinewebfonts.com/t/095df2d8a2d98ea67750c993758df467.woff")
+            format("woff"),
+          url("//db.onlinewebfonts.com/t/095df2d8a2d98ea67750c993758df467.ttf")
+            format("truetype"),
+          url("//db.onlinewebfonts.com/t/095df2d8a2d98ea67750c993758df467.svg#Nordea Sans Large Bold")
+            format("svg");
+      }
+
+      @font-face {
+        font-family: "Nordea Sans Small";
+        src: url("//db.onlinewebfonts.com/t/22bbdd53424bef8a0c11fde5ed420f5f.eot");
+        src: url("//db.onlinewebfonts.com/t/22bbdd53424bef8a0c11fde5ed420f5f.eot?#iefix")
+            format("embedded-opentype"),
+          url("//db.onlinewebfonts.com/t/22bbdd53424bef8a0c11fde5ed420f5f.woff2")
+            format("woff2"),
+          url("//db.onlinewebfonts.com/t/22bbdd53424bef8a0c11fde5ed420f5f.woff")
+            format("woff"),
+          url("//db.onlinewebfonts.com/t/22bbdd53424bef8a0c11fde5ed420f5f.ttf")
+            format("truetype"),
+          url("//db.onlinewebfonts.com/t/22bbdd53424bef8a0c11fde5ed420f5f.svg#Nordea Sans Small")
+            format("svg");
+      }
+
+      .banner__btn {
+        font-family: "Nordea Sans Small", sans-serif;
+        font-size: 10px;
+        text-align: center;
+        color: #0000a0;
+        background-color: #ffffff;
+        border: none;
+        border-radius: 17px;
+        position: absolute;
+        top: 319px;
+        left: 256px;
+        width: 70px;
+        height: 19px;
+      }
+
+      .banner__btn:hover {
+        cursor: pointer;
+        border-color: #ffe183;
+        background-color: #ffe183;
+      }
+
+      .banner__cta {
+        position: absolute;
+        top: 256px;
+        left: 50px;
+        width: 480px;
+        height: 60px;
+      }
+
+      .cta__headline {
+        line-height: 30px;
+        font-size: 22px;
+        text-align: center;
+        font-family: "Nordea Sans Large Bold", sans-serif;
+        font-weight: 900;
+      }
+
+      .footer__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .footer__info {
+        position: absolute;
+        top: 377px;
+        left: 4px;
+        width: 372px;
+        height: 20px;
+      }
+
+      .info__text {
+        font-size: 7px;
+        font-family: "Nordea Sans Small", sans-serif;
+        line-height: 10px;
+        letter-spacing: 0px;
+      }
+
+      .img__bubble {
+        height: 400px;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .tinRightIn {
+        -webkit-animation-name: tinRightIn;
+        animation-name: tinRightIn;
+        -webkit-animation-duration: 1.2s;
+        animation-duration: 1.2s;
+      }
+
+      @-webkit-keyframes tinRightIn {
+        0% {
+          opacity: 0;
+          -webkit-transform: scale(1, 1) translateX(900%);
+          transform: scale(1, 1) translateX(900%);
+        }
+        50%,
+        70%,
+        90% {
+          opacity: 1;
+          -webkit-transform: scale(1.1, 1.1) translateX(0);
+          transform: scale(1.1, 1.1) translateX(0);
+        }
+        60%,
+        80%,
+        100% {
+          opacity: 1;
+          -webkit-transform: scale(1, 1) translateX(0);
+          transform: scale(1, 1) translateX(0);
+        }
+      }
+
+      @keyframes tinRightIn {
+        0% {
+          opacity: 0;
+          -webkit-transform: scale(1, 1) translateX(900%);
+          transform: scale(1, 1) translateX(900%);
+        }
+        50%,
+        70%,
+        90% {
+          opacity: 1;
+          -webkit-transform: scale(1.1, 1.1) translateX(0);
+          transform: scale(1.1, 1.1) translateX(0);
+        }
+        60%,
+        80%,
+        100% {
+          opacity: 1;
+          -webkit-transform: scale(1, 1) translateX(0);
+          transform: scale(1, 1) translateX(0);
+        }
+      }
+      #bg-exit {
+        cursor: pointer;
+        z-index: 1;
+      }
+
+    </style>
+  </head>
+
+  <body class="page">
+    <div class="banner" id="bg-exit" onclick="javascript:window.open('https://nordea.no')">
+      <section class="banner__img">
+        <img class="img__bubble" id="bubble" alt="" />
+        <!--
             <p class="bubble-brand tinRightIn">brand</p>
             <p class="bubble-model tinRightIn">model</p>
             <p class="bubble-price tinRightIn">price</p>
@@ -27,50 +192,130 @@
                     <path id="Path_140" data-name="Path 140" d="M.078,107.268C-.429,81.736,3.524,57.191,16.256,34.58A68.64,68.64,0,0,1,143.93,59.993c4.412,32.79-18.964,61.947-46.265,72.976-14.792,5.976-30.353,6.877-45.961,6.321a259.57,259.57,0,0,1-42.577-5.545c-10.241-1.815-8.993-1.815-9.11-11.517C-.043,117.25.078,112.256.078,107.268Z" transform="translate(-72.234 -69.715)" fill="#ffe183"/>
                 </g>
             </svg> -->
-            <img class="img__main" id="car" alt="an electric car" >
+        <img class="img__main" id="car" alt="an electric car" />
+      </section>
+      <section class="banner__cta">
+        <p class="cta__headline">Lease en elektrisk varebil til din bedrift.</p>
+        <p class="cta__headline">Nå til kampanjepris!</p>
+      </section>
+      <button type="button" class="banner__btn" onclick="">Les mer</button>
+      <footer class="footer">
+        <img class="footer__img" src="./nordealogo.png" alt="nordea logo" />
+        <section class="footer__info">
+          <p id="random"></p>
+          <p class="info__text" id="footer-line1"></p>
+          <p class="info__text" id="footer-line2"></p>
         </section>
-        <section class="banner__cta">
-            <p class="cta__headline">Lease en elektrisk varebil til din bedrift.</p>
-            <p class="cta__headline">Nå til kampanjepris!</p>
-        </section>
-        <button type="button" class="banner__btn" onclick="">Les mer</button>
-        <footer class="footer">
-            <img class="footer__img" src="./nordealogo.png" alt="nordea logo">
-            <section class="footer__info">
-                <p id="random"></p>
-                <p class="info__text" id="footer-line1"></p>
-                <p class="info__text" id="footer-line2"></p>      
-            </section>
-        </footer>
-    </main>
-    <script type="text/javascript" src="js/getNextState.js"></script>
+      </footer>
+    </div>
+    <!-- <script type="text/javascript" src="js/getNextState.js"></script> -->
+    <script type="text/javascript">
+      const cars = [
+        {
+          image: "bil1.jpg",
+          footer1:
+            "Inklusive frakt, lev. og reg.omk Oslo, Månedspris fra 3 199 kr. Etableringsgebyr: 1 990 kr.",
+          footer2:
+            "Totalpris: 265 931 kr vil variere med rentenivået. Priseksempel 5 års leasing: Startleie 72 001 kr / 60 mnd. / 100 000 km",
+          bubble: "copy1.png",
+        },
+        {
+          image: "bil2.jpg",
+          footer1:
+            "Inklusive frakt, lev. og reg.omk Oslo, Månedspris fra 3 499 kr. Etableringsgebyr: 1 990 kr. Totalpris: 308 669 kr",
+          footer2:
+            "vil variere med rentenivået. Priseksempel 5 års leasing: Startleie 96 739 kr / 60 mnd. / 100 000 km",
+          bubble: "copy2.png",
+        },
+        {
+          image: "bil3.jpg",
+          footer1:
+            "Inklusive frakt, lev. og reg.omk Oslo, Månedspris fra 3 199 kr. Etableringsgebyr: 1 990 kr.   ",
+          footer2:
+            "Totalpris: 265 951 kr vil variere med rentenivået. Priseksempel 5 års leasing: Startleie 72 021 kr / 60 mnd. / 100 000 km",
+          bubble: "copy3.png",
+        },
+        {
+          image: "bil4.jpg",
+          footer1:
+            "Inklusive frakt, lev. og reg.omk Oslo, Månedspris fra 3 499 kr. Etableringsgebyr: 1 990 kr.    ",
+          footer2:
+            "Totalpris: 307 925 kr vil variere med rentenivået. Priseksempel 5 års leasing: Startleie 95 995 kr / 60 mnd. / 100 000 km  ",
+          bubble: "copy4.png",
+        },
+      ];
+
+      const displayTime = 5000;
+
+      const setImgSrc = (fileName, id) => {
+        const element = document.getElementById(id);
+        const url = `./` + fileName;
+        element.src = url;
+      };
+
+      const setFooterInfo = (footer1, footer2) => {
+        const footerLine1 = document.getElementById("footer-line1");
+        const footerLine2 = document.getElementById("footer-line2");
+        footerLine1.textContent = footer1;
+        footerLine2.textContent = footer2;
+      };
+
+      const getCarState = (car) => {
+        document.getElementById("bubble").classList.toggle("tinRightIn");
+        setImgSrc(car.image, "car");
+        setImgSrc(car.bubble, "bubble");
+        setFooterInfo(car.footer1, car.footer2);
+        setTimeout(() => {
+          document.getElementById("bubble").classList.toggle("tinRightIn");
+        }, displayTime - 500);
+      };
+
+      const setStateAnimation = (cars) => {
+        getCarState(cars[0]);
+        let i = 1;
+        const changeState = () => {
+          getCarState(cars[i]);
+          i = (i + 1) % cars.length;
+        };
+        setInterval(changeState, displayTime);
+      };
+      setStateAnimation(cars)
+    </script>
 
     <script type="text/javascript">
-        if (!Enabler.isInitialized()) {
+      if (!Enabler.isInitialized()) {
+        Enabler.addEventListener(
+          studio.events.StudioEvent.INIT,
+          enablerInitialized
+        );
+      } else {
+        enablerInitialized();
+      }
+
+      function enablerInitialized() {
+        if (!Enabler.isVisible()) {
           Enabler.addEventListener(
-            studio.events.StudioEvent.INIT,
-            enablerInitialized);
+            studio.events.StudioEvent.VISIBLE,
+            adVisible
+          );
         } else {
-            enablerInitialized();
+          adVisible();
         }
-        function enablerInitialized() {
-          // Enabler initialized.
-          // In App ads are rendered offscreen so animation should wait for
-          // the visible event. These are simulated with delays in the local
-          // environment.
-          if (!Enabler.isVisible()) {
-            Enabler.addEventListener(
-                studio.events.StudioEvent.VISIBLE,
-                adVisible);
-            } else {
-                adVisible();
-            }
-        }
-        function adVisible() {
-            // Ad visible, start ad/animation.
-        }
-        </script>
+      }
 
-</body>
+      function adVisible() {
+        // Ad visible, start ad/animation.
+        // setStateAnimation(cars);
+      }
 
+      function bgExitHandler(e) {
+        Enabler.exit("Background Exit");
+      }
+
+      document
+        .getElementById("bg-exit")
+        .addEventListener("click", bgExitHandler, false);
+
+    </script>
+  </body>
 </html>

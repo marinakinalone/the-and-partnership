@@ -1,4 +1,3 @@
-console.log("hello")
 const cars = [{
     image: "bil1.jpg",
     footer1: "Inklusive frakt, lev. og reg.omk Oslo, Månedspris fra 3 199 kr. Etableringsgebyr: 1 990 kr.",
