@@ -1,0 +1,215 @@
+<!-- Jonatan Lindahl | 2020-02-12 -->
+<!-- NAME OF ADAPTOR | DATE AMENDED -->
+
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="ad.size" content="width=300, height=600">
+
+
+<script type="text/javascript">
+    var clickTag = "http://www.nordeadirect.no"; //only used for testing if DCM
+</script>
+
+<!--remove CDN links if not required-->
+
+<title>The & Partnership Rich Media Banner | Nordea | YS</title>
+
+<script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+<script src="https://s0.2mdn.net/ads/studio/cached_libs/cssplugin_1.19.1_3e055071719ea45b6807509f844b72d9_min.js"></script>
+<script src="https://s0.2mdn.net/ads/studio/cached_libs/easepack_1.19.1_73f878f2eefbdccb4dd209b874ad9cc4_min.js"></script>
+<script src="https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.19.1_92cf05aba6ca4ea5cbc62b5a7cb924e3_min.js"></script>
+
+<style type="text/css">
+@font-face {
+  font-family: "NDSansMed";
+  src: url("NDSansMed.woff") format("woff");
+}
+html, body {
+	margin:0;
+	padding:0;
+}
+
+#ad{
+	background: #E5F2FF;
+	cursor:pointer;
+	overflow:hidden;
+}
+
+.size{
+	width:300px;
+	height:600px;
+	top:0px;
+	left:0px;
+}
+
+.pos{
+	position:absolute;
+	transition-property: opacity, transform;
+}
+
+.skygge {
+	-webkit-box-shadow: 0px 0px 19px 3px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 19px 3px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 19px 3px rgba(0,0,0,0.75);
+}
+
+p {
+	opacity:1;
+	font-family: "NDSansMed", sans-serif;
+	font-weight: 400;
+	color: #0000A0;
+	font-size: 19px;
+	line-height: 22px;
+}
+
+#border{
+	/* border: 1px #0000A0 solid; */
+	width: 300;
+	height: 600;
+	pointer-events: none;
+}
+
+#logo {
+	left: 67px;
+	top: 0px;
+	width: 166px;
+	opacity:1;
+}
+
+#videoContainer, #video, #poster {
+	right: 0px;
+	top: 0px;
+}
+
+#rentepil{
+	left: 137px;
+	top: 280px;
+	width: 150px;
+	opacity:1;
+}
+
+#ctapil{
+	left: 20px;
+	top: 488px;
+	opacity:0;
+	height: 32px;
+}
+
+#coBranding {
+	right: 4px;
+	bottom: 4px;
+	width: 36px;
+}
+
+#copy1, #copy2 {
+	left: 20px;
+	top: 408px;
+}
+
+#legal {
+	left: 14px;
+	bottom: 0px;
+	width: 235px;
+	font-size: 10px;
+	line-height: 11px;
+}
+
+#copy1{
+	opacity:1;
+}
+#copy2{
+	opacity:0;
+}
+
+</style>
+
+<script type="text/javascript">
+
+var dcm = true; //True for DCM false for DCS
+
+function init(){
+
+	var tl = new TimelineMax({repeat:0, repeatDelay:0.5, onComplete:endAnimation})
+	.to("#copy1",0.8,{opacity:1, ease: Power1.easeOut})
+
+	.to("#copy1",0.5,{opacity:0, delay:2, ease: Power1.easeOut})
+	.to("#copy2, #ctapil",0.5,{opacity:1, ease: Power1.easeOut})
+  //.to("#rentepil",0.4,{x:13, yoyo:true, repeat:1, ease: "inOut(0.8)", delay:-1})
+
+	.to("#copy2",0.5,{opacity:0, delay:3, ease: Power1.easeOut})
+	.to("#copy1",0.5,{opacity:1, ease: Power1.easeOut})
+  //.to("#rentepil",0.4,{x:13, yoyo:true, repeat:1, ease: "inOut(0.8)", delay:-1})
+
+	.to("#copy1",0.5,{opacity:0, delay:3, ease: Power1.easeOut})
+	.to("#copy2",0.5,{opacity:1, ease: Power1.easeOut})
+  //.to("#rentepil",0.4,{x:13, yoyo:true, repeat:1, ease: "inOut(0.8)", delay:-1})
+
+	.to("#copy2",0.5,{opacity:0, delay:3, ease: Power1.easeOut})
+	.to("#copy1",0.5,{opacity:1, ease: Power1.easeOut})
+  //.to("#rentepil",0.4,{x:13, yoyo:true, repeat:1, ease: "inOut(0.8)", delay:-1})
+
+	.to("#copy1",0.5,{opacity:0, delay:3, ease: Power1.easeOut})
+	.to("#copy2",0.5,{opacity:1, ease: Power1.easeOut})
+  //.to("#rentepil",0.4,{x:13, yoyo:true, repeat:1, ease: "inOut(0.8)", delay:-1})
+
+	.to("#copy2",0.5,{opacity:0, delay:3, ease: Power1.easeOut})
+	.to("#copy1",0.5,{opacity:1, ease: Power1.easeOut})
+  //.to("#rentepil",0.4,{x:13, yoyo:true, repeat:1, ease: "inOut(0.8)", delay:-1})
+	}
+
+	function endAnimation(){
+ 		var tl2 = new TimelineMax({delay:0.5})
+		.to("#copy1",0.5,{opacity:0, delay:1, ease: Power1.easeOut})
+		.to("#copy2, #ctapil",0.5,{opacity:1, ease: Power1.easeOut})
+		//.to("#rentepil",0.4,{x:13, yoyo:true, repeat:1, ease: "inOut(0.8)", delay:-1})
+ 	}
+
+	window.onload = function(){
+	if(dcm){init();}else{
+		if (Enabler.isInitialized()) {
+			enablerInitHandler();
+		} else {
+			Enabler.addEventListener(studio.events.StudioEvent.INIT, enablerInitHandler);
+		}
+	}
+	}
+
+	function enablerInitHandler() {
+	if (Enabler.isPageLoaded()) {
+		pageLoadedHandler();
+	} else {
+		Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED, pageLoadedHandler);
+	}
+	}
+
+	function pageLoadedHandler() {
+		clickTag = Enabler.exit("click");
+		init();
+	}
+	</script>
+
+	</head>
+
+	<body>
+		<a href="#" onclick="javascript:window.open(window.clickTag)">
+			<div id="ad" class="size pos">
+				<img src="poster.jpg" class="poster pos">
+				<div id="videoContainer" class="pos">
+					<video id='video' autoplay muted playsinline webkit-playsinline ><source src='300x600.mp4' type='video/mp4'></video>
+				</div>
+				<p id="copy1" class="pos">YS-medlem?</p>
+				<p id="copy2" class="pos">Sjekk hvor mye du kan spare<br>på å flytte lånet</p>
+				<img id="rentepil" src="rentepil.svg" class="pos" alt="Boliglån fra 1,39 %">
+				<img id="logo" src="ND-logo-Hv-skygge.svg" class="pos" alt="Nordea Direct">
+				<img id="coBranding" src="ys-48sq--2x.png" class="pos" alt="YS logo">
+				<img id="ctapil" src="cta-FlyttLanet.svg" class="pos" alt="Flytt lånet">
+				<p id="legal" class="pos">Priseks.: Boliglån 50 % 2 mill., o/25 år, <br> nom. rente 1,39 %, eff. rente 1,45 %, <br> totalt: 2 383 732,-.</p>
+				<div id="border" class="size pos"></div>
+			</div>
+		</a>
+	</body>
+</html>
