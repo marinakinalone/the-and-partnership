@@ -80,8 +80,8 @@
       .banner__cta {
         position: absolute;
         top: 256px;
-        left: 72px;
-        width: 436px;
+        left: 50px;
+        width: 480px;
         height: 60px;
       }
 
@@ -170,12 +170,11 @@
         cursor: pointer;
         z-index: 1;
       }
-
     </style>
   </head>
 
   <body class="page">
-    <div class="banner" id="bg-exit">
+    <div class="banner" id="bg-exit" onclick="javascript:window.open('https://nordea.no')">
       <section class="banner__img">
         <img class="img__bubble" id="bubble" alt="" />
         <!--
@@ -274,7 +273,7 @@
         };
         setInterval(changeState, displayTime);
       };
-      setStateAnimation(cars)
+      setStateAnimation(cars);
     </script>
 
     <script type="text/javascript">
@@ -310,7 +309,6 @@
       document
         .getElementById("bg-exit")
         .addEventListener("click", bgExitHandler, false);
-
     </script>
   </body>
 </html>
