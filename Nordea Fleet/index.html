@@ -25,37 +25,17 @@
         width: 580px;
         height: 400px;
       }
-
       @font-face {
         font-family: "Nordea Sans Large Bold";
-        src: url("//db.onlinewebfonts.com/t/095df2d8a2d98ea67750c993758df467.eot");
-        src: url("//db.onlinewebfonts.com/t/095df2d8a2d98ea67750c993758df467.eot?#iefix")
-            format("embedded-opentype"),
-          url("//db.onlinewebfonts.com/t/095df2d8a2d98ea67750c993758df467.woff2")
-            format("woff2"),
-          url("//db.onlinewebfonts.com/t/095df2d8a2d98ea67750c993758df467.woff")
-            format("woff"),
-          url("//db.onlinewebfonts.com/t/095df2d8a2d98ea67750c993758df467.ttf")
-            format("truetype"),
-          url("//db.onlinewebfonts.com/t/095df2d8a2d98ea67750c993758df467.svg#Nordea Sans Large Bold")
-            format("svg");
+        src:  url("Nordea Large.woff")
+            format("truetype");
       }
 
       @font-face {
         font-family: "Nordea Sans Small";
-        src: url("//db.onlinewebfonts.com/t/22bbdd53424bef8a0c11fde5ed420f5f.eot");
-        src: url("//db.onlinewebfonts.com/t/22bbdd53424bef8a0c11fde5ed420f5f.eot?#iefix")
-            format("embedded-opentype"),
-          url("//db.onlinewebfonts.com/t/22bbdd53424bef8a0c11fde5ed420f5f.woff2")
-            format("woff2"),
-          url("//db.onlinewebfonts.com/t/22bbdd53424bef8a0c11fde5ed420f5f.woff")
-            format("woff"),
-          url("//db.onlinewebfonts.com/t/22bbdd53424bef8a0c11fde5ed420f5f.ttf")
-            format("truetype"),
-          url("//db.onlinewebfonts.com/t/22bbdd53424bef8a0c11fde5ed420f5f.svg#Nordea Sans Small")
-            format("svg");
+        src:  url("Nordea Small.woff")
+            format("truetype");
       }
-
       .banner__btn {
         font-family: "Nordea Sans Small", sans-serif;
         font-size: 10px;
@@ -80,8 +60,8 @@
       .banner__cta {
         position: absolute;
         top: 256px;
-        left: 50px;
-        width: 480px;
+        left: 40px;
+        width: 500px;
         height: 60px;
       }
 
@@ -174,7 +154,11 @@
   </head>
 
   <body class="page">
-    <div class="banner" id="bg-exit" onclick="javascript:window.open('https://nordea.no')">
+    <div
+      class="banner"
+      id="bg-exit"
+      onclick="javascript:window.open('https://nordea.no')"
+    >
       <section class="banner__img">
         <img class="img__bubble" id="bubble" alt="" />
         <!--
