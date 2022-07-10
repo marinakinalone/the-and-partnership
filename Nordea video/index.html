@@ -126,7 +126,46 @@ p {
 }
 
 </style>
-
+<!-- NEW CODE START -->
+<script language="javascript">
+	//Initialize Enabler
+	if (Enabler.isInitialized()) {
+		init();
+	} else {
+		Enabler.addEventListener(studio.events.StudioEvent.INIT, init);
+	}
+	//Run when Enabler is ready
+	function init(){
+		//politeInit();
+		//Load in Javascript
+		
+		if (Enabler.isPageLoaded()) {
+			politeInit();
+		} else {
+			Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED, politeInit);
+		} 
+	}
+	
+	function politeInit() {		
+		//Load in Javascript
+		var extJavascript = document.createElement('script');
+		extJavascript.setAttribute('type', 'text/javascript');
+		extJavascript.setAttribute('src', Enabler.getFilename('DCRM_HTML5_inPage_Polite_300x600.js')); 
+		document.getElementsByTagName('head')[0].appendChild(extJavascript);
+		
+		//Load in CSS
+		
+		var extCSS=document.createElement('link');
+		extCSS.setAttribute("rel", "stylesheet");
+		extCSS.setAttribute("type", "text/css");
+		extCSS.setAttribute("href", Enabler.getFilename("DCRM_HTML5_inPage_Polite_300x600.css")); 
+		document.getElementsByTagName("head")[0].appendChild(extCSS);
+		document.getElementById("container_dc").style.opacity=1;
+		document.getElementById("loading_image_dc").style.opacity=0;
+		document.getElementById("container_dc").style.display = "block";
+		}
+</script>
+<!-- NEW CODE END -->
 <script type="text/javascript">
 
 var dcm = true; //True for DCM false for DCS
