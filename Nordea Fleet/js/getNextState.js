@@ -1,60 +1,62 @@
-const cars = [{
-    image: "bil1.jpg",
-    footer1: "Inklusive frakt, lev. og reg.omk Oslo, Månedspris fra 3 199 kr. Etableringsgebyr: 1 990 kr.",
-    footer2: "Totalpris: 265 931 kr vil variere med rentenivået. Priseksempel 5 års leasing: Startleie 72 001 kr / 60 mnd. / 100 000 km",
-    bubble: "copy1.png"
-    },{
-    image: "bil2.jpg",
-    footer1: "Inklusive frakt, lev. og reg.omk Oslo, Månedspris fra 3 499 kr. Etableringsgebyr: 1 990 kr. Totalpris: 308 669 kr",
-    footer2: "vil variere med rentenivået. Priseksempel 5 års leasing: Startleie 96 739 kr / 60 mnd. / 100 000 km",
-    bubble: "copy2.png"
-    },{
-    image: "bil3.jpg",
-    footer1: "Inklusive frakt, lev. og reg.omk Oslo, Månedspris fra 3 199 kr. Etableringsgebyr: 1 990 kr.   ",
-    footer2: "Totalpris: 265 951 kr vil variere med rentenivået. Priseksempel 5 års leasing: Startleie 72 021 kr / 60 mnd. / 100 000 km",
-    bubble: "copy3.png"
-    },{
-    image: "bil4.jpg",
-    footer1: "Inklusive frakt, lev. og reg.omk Oslo, Månedspris fra 3 499 kr. Etableringsgebyr: 1 990 kr.    ",
-    footer2: "Totalpris: 307 925 kr vil variere med rentenivået. Priseksempel 5 års leasing: Startleie 95 995 kr / 60 mnd. / 100 000 km  ",
-    bubble: "copy4.png"
-    }]
+const cars = [
+    {
+      image: "bil1.jpg",
+      footer: "footer1.png",
+      bubble: "bubble1.png",
+    },
+    {
+      image: "bil2.jpg",
+      footer: "footer2.png",
+      bubble: "bubble2.png",
+    },
+    {
+      image: "bil3.jpg",
+      footer: "footer3.png",
+      bubble: "bubble3.png",
+    },
+    {
+      image: "bil4.jpg",
+      footer: "footer4.png",
+      bubble: "bubble4.png",
+    },
+  ];
 
-const displayTime = 5000;
+  const displayTime = 5000;
 
-const setImgSrc = (fileName, id) => {
-    const element = document.getElementById(id)
-    const url = `./` + fileName
-    element.src = url
-}
+  const setImgSrc = (fileName, id) => {
+    const element = document.getElementById(id);
+    const url = `./` + fileName;
+    element.src = url;
+  };
 
-const setFooterInfo = (footer1, footer2) => {
-    const footerLine1 = document.getElementById('footer-line1')
-    const footerLine2 = document.getElementById('footer-line2')
-    footerLine1.textContent = footer1
-    footerLine2.textContent = footer2
-}
+  const toggleClass = (element, className) => {
+    element.classList.toggle(className)
+  }
 
-
-const getCarState = (car) => {
-    document.getElementById('bubble').classList.toggle('tinRightIn')
-    setImgSrc(car.image, 'car');
-    setImgSrc(car.bubble, 'bubble')
-    setFooterInfo(car.footer1, car.footer2)
+  const getCarState = (car, i) => {
+    const element = document.getElementById("bubble")
+    const index = i === 0 ? cars.length :  i;
+    toggleClass(element, `bubble-${index}`)
+    toggleClass(element, "tinRightIn")
+    toggleClass(element, `bubble-${i + 1}`)
+    setImgSrc(car.image, "car");
+    setImgSrc(car.bubble, "bubble");
+    setImgSrc(car.footer, "footer")
     setTimeout(() => {
-        document.getElementById('bubble').classList.toggle('tinRightIn')
-    }, displayTime - 500)
+        toggleClass(element, "tinRightIn")
+        console.log(element.className)
+    }, displayTime - 100);
+  };
 
-}
-
-const setStateAnimation = (cars) => {
-    getCarState(cars[0])
+  const setStateAnimation = (cars) => {
+    toggleClass(document.getElementById("bubble"), `bubble-4`)
+    getCarState(cars[0], 0);
     let i = 1;
     const changeState = () => {
-        getCarState(cars[i])
-        i = (i + 1) % cars.length;
-    } 
-    setInterval(changeState, displayTime)
-
-}
-setStateAnimation(cars)
+      getCarState(cars[i], i);
+      console.log(i)
+      i = (i + 1) % cars.length;
+    };
+    setInterval(changeState, displayTime);
+  };
+  setStateAnimation(cars);

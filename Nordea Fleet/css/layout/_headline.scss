@@ -1,15 +1,21 @@
-.banner__cta {
-    position: absolute;
-    top: 256px;
-    left: 72px;
-    width: 436px;
-    height: 60px;
+.img__headline {
+    top: 259px;
+    left: 92px;
+    width: 396px;
+    height: 54px;
 }
 
-.cta__headline {
-    line-height: 30px;
-    font-size: 22px;
-    text-align: center;
-    font-family: $nordea_large;
-    font-weight: 900;
+.img__button {
+    top: 319px;
+    left: 256px;
+    width: 70px;
+    height: 19px;
 }
+
+.img__logo {
+    top: 345px;
+    left: 446px;
+    width: 134px;
+    height: 55px;
+}
+

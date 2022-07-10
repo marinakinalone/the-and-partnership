@@ -1,43 +1,48 @@
 .img__bubble {
-    height: $banner_height;
-    position: absolute;
-    top: 0;
-    left: 0;
+  width: 180px;
+  height: 183px;
+}
+
+.bubble-1 {
+  top: 0px;
+  left: 16px;
+}
+
+.bubble-2 {
+  top: 9px;
+  left: 16px;
+
+}
+
+.bubble-3 {
+  top: 35px;
+  left: 4px;
+}
+
+.bubble-4 {
+  top: 0;
+  left: 21px;
+
 }
 
 .tinRightIn {
-    -webkit-animation-name: tinRightIn;
-    animation-name: tinRightIn;
-    animation-duration: 1.2s;
-  }
-  
+  animation-name: tinRightIn;
+  animation-duration: 1.2s;
+}
 
-  @-webkit-keyframes tinRightIn {
-    0% {
-      opacity: 0;
-      transform: scale(1, 1) translateX(900%);
-    }
-    50%, 70%, 90% {
-      opacity: 1;
-      transform: scale(1.1, 1.1) translateX(0);
-    }
-    60%, 80%, 100% {
-      opacity: 1;
-      transform: scale(1, 1) translateX(0);
-    }
+@keyframes tinRightIn {
+  0% {
+    opacity: 0;
+    transform: scale(1, 1) translateX(900%);
+  }
+  90% {
+    opacity: 1;
+    transform: scale(1.1, 1.1) translateX(0);
   }
 
-  @keyframes tinRightIn {
-    0% {
-      opacity: 0;
-      transform: scale(1, 1) translateX(900%);
-    }
-    50%, 70%, 90% {
-      opacity: 1;
-      transform: scale(1.1, 1.1) translateX(0);
-    }
-    60%, 80%, 100% {
-      opacity: 1;
-      transform: scale(1, 1) translateX(0);
-    }
+  80%,
+  100% {
+    opacity: 1;
+    transform: scale(1, 1) translateX(0);
   }
+}

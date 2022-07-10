@@ -8,230 +8,36 @@
     <meta name="ad.size" content="width=580,height=400" />
     <script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
 
-    <style type="text/css">
-      * {
-        margin: 0;
-        padding: 0;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-      }
+    <!-- DEV - start -->
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- DEV - end -->
+    
+    <style>
 
-      .banner {
-        color: #ffffff;
-        background-color: #0000a0;
-        width: 580px;
-        height: 400px;
-        border: 1px solid #ffffff;
-      }
-      @font-face {
-        font-family: "Nordea Sans Large Bold";
-        src:  url("Nordea Large.woff")
-            format("truetype");
-      }
-
-      @font-face {
-        font-family: "Nordea Sans Small";
-        src:  url("Nordea Small.woff")
-            format("truetype");
-      }
-      .banner__btn {
-        font-family: "Nordea Sans Small", sans-serif;
-        font-size: 10px;
-        text-align: center;
-        color: #0000a0;
-        background-color: #ffffff;
-        border: none;
-        border-radius: 17px;
-        position: absolute;
-        top: 319px;
-        left: 256px;
-        width: 70px;
-        height: 19px;
-      }
-
-      .banner__btn:hover {
-        cursor: pointer;
-        border-color: #ffe183;
-        background-color: #ffe183;
-      }
-
-      .banner__cta {
-        position: absolute;
-        top: 256px;
-        left: 40px;
-        width: 500px;
-        height: 60px;
-      }
-
-      .cta__headline {
-        line-height: 30px;
-        font-size: 22px;
-        text-align: center;
-        font-family: "Nordea Sans Large Bold", sans-serif;
-        font-weight: 900;
-      }
-
-      .footer__img {
-        position: absolute;
-        top: 0;
-        left: 0;
-      }
-
-      .footer__info {
-        position: absolute;
-        top: 377px;
-        left: 4px;
-        width: 372px;
-        height: 20px;
-      }
-
-      .info__text {
-        font-size: 7px;
-        font-family: "Nordea Sans Small", sans-serif;
-        line-height: 10px;
-        letter-spacing: 0px;
-      }
-
-      .img__bubble {
-        height: 400px;
-        position: absolute;
-        top: 0;
-        left: 0;
-      }
-
-      .tinRightIn {
-        animation-name: tinRightIn;
-        animation-duration: 1.2s;
-      }
-
-      @keyframes tinRightIn {
-        0% {
-          opacity: 0;
-          transform: scale(1, 1) translateX(900%);
-        }
-        90% {
-          opacity: 1;
-          transform: scale(1.1, 1.1) translateX(0);
-        }
-
-        80%,
-        100% {
-          opacity: 1;
-          transform: scale(1, 1) translateX(0);
-        }
-      }
-      #bg-exit {
-        cursor: pointer;
-        z-index: 1;
-      }
     </style>
   </head>
 
-  <body class="page">
+  <body>
     <div
       class="banner"
       id="bg-exit"
       onclick="javascript:window.open('https://nordea.no')"
     >
-      <section class="banner__img">
-        <img class="img__bubble" id="bubble" alt="" />
-        <!--
-            <p class="bubble-brand tinRightIn">brand</p>
-            <p class="bubble-model tinRightIn">model</p>
-            <p class="bubble-price tinRightIn">price</p>
-             <svg class="bubble tinRightIn" xmlns="http://www.w3.org/2000/svg" width="180.432" height="183.443" viewBox="0 0 180.432 183.443">
-                <g id="Artwork_2" data-name="Artwork 2" transform="translate(90.216 91.722) rotate(-110)">
-                    <path id="Path_140" data-name="Path 140" d="M.078,107.268C-.429,81.736,3.524,57.191,16.256,34.58A68.64,68.64,0,0,1,143.93,59.993c4.412,32.79-18.964,61.947-46.265,72.976-14.792,5.976-30.353,6.877-45.961,6.321a259.57,259.57,0,0,1-42.577-5.545c-10.241-1.815-8.993-1.815-9.11-11.517C-.043,117.25.078,112.256.078,107.268Z" transform="translate(-72.234 -69.715)" fill="#ffe183"/>
-                </g>
-            </svg> -->
-        <img class="img__main" id="car" alt="an electric car" />
-      </section>
-      <section class="banner__cta">
-        <p class="cta__headline">Lease en elektrisk varebil til din bedrift.</p>
-        <p class="cta__headline">Nå til kampanjepris!</p>
-      </section>
-      <button type="button" class="banner__btn" onclick="">Les mer</button>
-      <footer class="footer">
-        <img class="footer__img" src="./nordealogo.png" alt="nordea logo" />
-        <section class="footer__info">
-          <p id="random"></p>
-          <p class="info__text" id="footer-line1"></p>
-          <p class="info__text" id="footer-line2"></p>
-        </section>
-      </footer>
+        <img class="img__main" id="car" alt="" />
+        <img class="img__bubble" class="bubble-4" id="bubble" alt="" />
+        <img class="img__headline" src="./headline.png" alt="" />
+        <img class="img__button" src="./button.png" alt="" />
+        <img class="img__logo" src="./logo.png" alt="" />
+        <img class="img__footer" id="footer" alt="" />
     </div>
-    <script type="text/javascript">
-      const cars = [
-        {
-          image: "bil1.jpg",
-          footer1:
-            "Inklusive frakt, lev. og reg.omk Oslo, Månedspris fra 3 199 kr. Etableringsgebyr: 1 990 kr.",
-          footer2:
-            "Totalpris: 265 931 kr vil variere med rentenivået. Priseksempel 5 års leasing: Startleie 72 001 kr / 60 mnd. / 100 000 km",
-          bubble: "copy1.png",
-        },
-        {
-          image: "bil2.jpg",
-          footer1:
-            "Inklusive frakt, lev. og reg.omk Oslo, Månedspris fra 3 499 kr. Etableringsgebyr: 1 990 kr. Totalpris: 308 669 kr",
-          footer2:
-            "vil variere med rentenivået. Priseksempel 5 års leasing: Startleie 96 739 kr / 60 mnd. / 100 000 km",
-          bubble: "copy2.png",
-        },
-        {
-          image: "bil3.jpg",
-          footer1:
-            "Inklusive frakt, lev. og reg.omk Oslo, Månedspris fra 3 199 kr. Etableringsgebyr: 1 990 kr.   ",
-          footer2:
-            "Totalpris: 265 951 kr vil variere med rentenivået. Priseksempel 5 års leasing: Startleie 72 021 kr / 60 mnd. / 100 000 km",
-          bubble: "copy3.png",
-        },
-        {
-          image: "bil4.jpg",
-          footer1:
-            "Inklusive frakt, lev. og reg.omk Oslo, Månedspris fra 3 499 kr. Etableringsgebyr: 1 990 kr.    ",
-          footer2:
-            "Totalpris: 307 925 kr vil variere med rentenivået. Priseksempel 5 års leasing: Startleie 95 995 kr / 60 mnd. / 100 000 km  ",
-          bubble: "copy4.png",
-        },
-      ];
+    <!-- DEV - start -->
+    <script type="text/javascript" src="./js/getNextState.js"></script>
+    
+    <!-- DEV - end -->
 
-      const displayTime = 5000;
-
-      const setImgSrc = (fileName, id) => {
-        const element = document.getElementById(id);
-        const url = `./` + fileName;
-        element.src = url;
-      };
-
-      const setFooterInfo = (footer1, footer2) => {
-        const footerLine1 = document.getElementById("footer-line1");
-        const footerLine2 = document.getElementById("footer-line2");
-        footerLine1.textContent = footer1;
-        footerLine2.textContent = footer2;
-      };
-
-      const getCarState = (car) => {
-        document.getElementById("bubble").classList.toggle("tinRightIn");
-        setImgSrc(car.image, "car");
-        setImgSrc(car.bubble, "bubble");
-        setFooterInfo(car.footer1, car.footer2);
-        setTimeout(() => {
-          document.getElementById("bubble").classList.toggle("tinRightIn");
-        }, displayTime - 500);
-      };
-
-      const setStateAnimation = (cars) => {
-        getCarState(cars[0]);
-        let i = 1;
-        const changeState = () => {
-          getCarState(cars[i]);
-          i = (i + 1) % cars.length;
-        };
-        setInterval(changeState, displayTime);
-      };
-      setStateAnimation(cars);
-    </script>
+    <!-- <script type="text/javascript">
+      
+    </script> -->
 
     <script type="text/javascript">
       if (!Enabler.isInitialized()) {
