@@ -1,6 +1,6 @@
 var dcm = true; //True for DCM false for DCS
 
-function init(){
+function startAnimation(){
 
 	var tl = new TimelineMax({repeat:0, repeatDelay:0.5, onComplete:endAnimation})
 	.to("#copy1",0.8,{opacity:1, ease: Power1.easeOut})
@@ -37,9 +37,9 @@ function init(){
 		//.to("#rentepil",0.4,{x:13, yoyo:true, repeat:1, ease: "inOut(0.8)", delay:-1})
  	}
 
+     startAnimation();
 
-    console.log('loading')
-    init();
+ 
 
 	// window.onload = function(){
 	// if(dcm){init();}else{
