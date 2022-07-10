@@ -9,11 +9,135 @@
     <script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
 
     <!-- DEV - start -->
-    <link rel="stylesheet" href="./css/main.css">
+    <!-- <link rel="stylesheet" href="./css/main.css" /> -->
     <!-- DEV - end -->
-    
-    <style>
 
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      .banner {
+        color: #ffffff;
+        background-color: #0000a0;
+        width: 580px;
+        height: 400px;
+        border: 1px solid #ffffff;
+      }
+
+      .banner * {
+        position: absolute;
+      }
+
+      #bg-exit {
+        cursor: pointer;
+        z-index: 1;
+      }
+
+      .img__main {
+        width: 578px;
+        height: 240px;
+      }
+
+      .img__headline {
+        top: 259px;
+        left: 92px;
+        width: 396px;
+        height: 54px;
+      }
+
+      .img__button {
+        top: 319px;
+        left: 256px;
+        width: 70px;
+        height: 19px;
+      }
+
+      .img__logo {
+        top: 345px;
+        left: 446px;
+        width: 134px;
+        height: 55px;
+      }
+
+      .img__footer {
+        top: 378px;
+        left: 4px;
+        height: 18px;
+      }
+
+      .img__bubble {
+        width: 180px;
+        height: 183px;
+      }
+
+      .bubble-1 {
+        top: 0px;
+        left: 16px;
+      }
+
+      .bubble-2 {
+        top: 9px;
+        left: 16px;
+      }
+
+      .bubble-3 {
+        top: 35px;
+        left: 4px;
+      }
+
+      .bubble-4 {
+        top: 0;
+        left: 21px;
+      }
+
+      .tinRightIn {
+        -webkit-animation-name: tinRightIn;
+        animation-name: tinRightIn;
+        -webkit-animation-duration: 1.2s;
+        animation-duration: 1.2s;
+      }
+
+      @-webkit-keyframes tinRightIn {
+        0% {
+          opacity: 0;
+          -webkit-transform: scale(1, 1) translateX(900%);
+          transform: scale(1, 1) translateX(900%);
+        }
+        90% {
+          opacity: 1;
+          -webkit-transform: scale(1.1, 1.1) translateX(0);
+          transform: scale(1.1, 1.1) translateX(0);
+        }
+        80%,
+        100% {
+          opacity: 1;
+          -webkit-transform: scale(1, 1) translateX(0);
+          transform: scale(1, 1) translateX(0);
+        }
+      }
+
+      @keyframes tinRightIn {
+        0% {
+          opacity: 0;
+          -webkit-transform: scale(1, 1) translateX(900%);
+          transform: scale(1, 1) translateX(900%);
+        }
+        90% {
+          opacity: 1;
+          -webkit-transform: scale(1.1, 1.1) translateX(0);
+          transform: scale(1.1, 1.1) translateX(0);
+        }
+        80%,
+        100% {
+          opacity: 1;
+          -webkit-transform: scale(1, 1) translateX(0);
+          transform: scale(1, 1) translateX(0);
+        }
+      }
     </style>
   </head>
 
@@ -23,21 +147,82 @@
       id="bg-exit"
       onclick="javascript:window.open('https://nordea.no')"
     >
-        <img class="img__main" id="car" alt="" />
-        <img class="img__bubble" class="bubble-4" id="bubble" alt="" />
-        <img class="img__headline" src="./headline.png" alt="" />
-        <img class="img__button" src="./button.png" alt="" />
-        <img class="img__logo" src="./logo.png" alt="" />
-        <img class="img__footer" id="footer" alt="" />
+      <img class="img__main" id="car" alt="" />
+      <img class="img__bubble" class="bubble-4" id="bubble" alt="" />
+      <img class="img__headline" src="./headline.png" alt="" />
+      <img class="img__button" src="./button.png" alt="" />
+      <img class="img__logo" src="./logo.png" alt="" />
+      <img class="img__footer" id="footer" alt="" />
     </div>
     <!-- DEV - start -->
-    <script type="text/javascript" src="./js/getNextState.js"></script>
-    
+    <!-- <script type="text/javascript" src="./js/getNextState.js"></script> -->
+
     <!-- DEV - end -->
 
-    <!-- <script type="text/javascript">
-      
-    </script> -->
+    <script type="text/javascript">
+      const cars = [
+        {
+          image: "bil1.jpg",
+          footer: "footer1.png",
+          bubble: "bubble1.png",
+        },
+        {
+          image: "bil2.jpg",
+          footer: "footer2.png",
+          bubble: "bubble2.png",
+        },
+        {
+          image: "bil3.jpg",
+          footer: "footer3.png",
+          bubble: "bubble3.png",
+        },
+        {
+          image: "bil4.jpg",
+          footer: "footer4.png",
+          bubble: "bubble4.png",
+        },
+      ];
+
+      const displayTime = 5000;
+
+      const setImgSrc = (fileName, id) => {
+        const element = document.getElementById(id);
+        const url = `./` + fileName;
+        element.src = url;
+      };
+
+      const toggleClass = (element, className) => {
+        element.classList.toggle(className);
+      };
+
+      const getCarState = (car, i) => {
+        const element = document.getElementById("bubble");
+        const index = i === 0 ? cars.length : i;
+        toggleClass(element, `bubble-${index}`);
+        toggleClass(element, "tinRightIn");
+        toggleClass(element, `bubble-${i + 1}`);
+        setImgSrc(car.image, "car");
+        setImgSrc(car.bubble, "bubble");
+        setImgSrc(car.footer, "footer");
+        setTimeout(() => {
+          toggleClass(element, "tinRightIn");
+          console.log(element.className);
+        }, displayTime - 100);
+      };
+
+      const setStateAnimation = (cars) => {
+        toggleClass(document.getElementById("bubble"), "bubble-4");
+        getCarState(cars[0], 0);
+        let i = 1;
+        const changeState = () => {
+          getCarState(cars[i], i);
+          console.log(i);
+          i = (i + 1) % cars.length;
+        };
+        setInterval(changeState, displayTime);
+      };
+      setStateAnimation(cars);
+    </script>
 
     <script type="text/javascript">
       if (!Enabler.isInitialized()) {

@@ -49,7 +49,7 @@ const cars = [
   };
 
   const setStateAnimation = (cars) => {
-    toggleClass(document.getElementById("bubble"), `bubble-4`)
+    toggleClass(document.getElementById("bubble"), "bubble-4")
     getCarState(cars[0], 0);
     let i = 1;
     const changeState = () => {
