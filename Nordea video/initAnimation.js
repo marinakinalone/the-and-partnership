@@ -39,27 +39,3 @@ function startAnimation(){
 
      startAnimation();
 
- 
-
-	// window.onload = function(){
-	// if(dcm){init();}else{
-	// 	if (Enabler.isInitialized()) {
-	// 		enablerInitHandler();
-	// 	} else {
-	// 		Enabler.addEventListener(studio.events.StudioEvent.INIT, enablerInitHandler);
-	// 	}
-	// }
-	// }
-
-	// function enablerInitHandler() {
-	// if (Enabler.isPageLoaded()) {
-	// 	pageLoadedHandler();
-	// } else {
-	// 	Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED, pageLoadedHandler);
-	// }
-	// }
-
-	// function pageLoadedHandler() {
-	// 	clickTag = Enabler.exit("click");
-	// 	init();
-	// }

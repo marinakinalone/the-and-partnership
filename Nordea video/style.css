@@ -76,3 +76,8 @@
   #copy2{
       opacity:0;
   }
+
+  #bg-exit {
+    cursor: pointer;
+    z-index: 1;
+  }
