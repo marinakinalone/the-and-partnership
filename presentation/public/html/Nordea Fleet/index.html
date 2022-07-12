@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <title>Nordea Fleet Banner</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="ad.size" content="width=580,height=400" />
+    <script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+    <link rel="stylesheet" href="./main.css" />
+    </style>
+  </head>
+
+  <body>
+    <div
+      class="banner"
+      id="bg-exit"
+      onclick="javascript:window.open('https://nordea.no')"
+    >
+      <img class="img__main" id="car" alt="car" />
+      <img class="img__bubble" class="bubble-4" id="bubble" alt="" />
+      <img class="img__headline" src="./headline.png" alt="Lease en elektrisk varebil til din bedrift. Nå til kampanjepris!" />
+      <img class="img__button" src="./button.png" alt="Les mer" />
+      <img class="img__logo" src="./logo.png" alt="Nordea Logo" />
+      <img class="img__footer" id="footer" alt="" />
+    </div>
+    <script type="text/javascript" src="./getNextState.js"></script>
+
+    <script type="text/javascript">
+      if (!Enabler.isInitialized()) {
+        Enabler.addEventListener(
+          studio.events.StudioEvent.INIT,
+          enablerInitialized
+        );
+      } else {
+        enablerInitialized();
+      }
+
+      function enablerInitialized() {
+        if (!Enabler.isVisible()) {
+          Enabler.addEventListener(
+            studio.events.StudioEvent.VISIBLE,
+            adVisible
+          );
+        } else {
+          adVisible();
+        }
+      }
+
+      function adVisible() {
+        // Ad visible, start ad/animation.
+        // setStateAnimation(cars);
+      }
+
+      function bgExitHandler(e) {
+        Enabler.exit("Background Exit");
+      }
+
+      document
+        .getElementById("bg-exit")
+        .addEventListener("click", bgExitHandler, false);
+    </script>
+  </body>
+</html>

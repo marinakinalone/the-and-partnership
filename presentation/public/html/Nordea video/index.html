@@ -1,0 +1,243 @@
+<!-- Jonatan Lindahl | 2020-02-12 -->
+<!-- NAME OF ADAPTOR | DATE AMENDED -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="ad.size" content="width=300, height=600" />
+
+    <script type="text/javascript">
+      var clickTag = "http://www.nordeadirect.no"; //only used for testing if DCM
+    </script>
+
+    <!--remove CDN links if not required-->
+
+    <title>The & Partnership Rich Media Banner | Nordea | YS</title>
+
+    <script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+    <script src="https://s0.2mdn.net/ads/studio/cached_libs/cssplugin_1.19.1_3e055071719ea45b6807509f844b72d9_min.js"></script>
+    <script src="https://s0.2mdn.net/ads/studio/cached_libs/easepack_1.19.1_73f878f2eefbdccb4dd209b874ad9cc4_min.js"></script>
+    <script src="https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.19.1_92cf05aba6ca4ea5cbc62b5a7cb924e3_min.js"></script>
+
+    <style type="text/css">
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      #ad {
+        background: #e5f2ff;
+        cursor: pointer;
+        overflow: hidden;
+      }
+
+      .size {
+        width: 300px;
+        height: 600px;
+        top: 0px;
+        left: 0px;
+      }
+
+      .pos {
+        position: absolute;
+        transition-property: opacity, transform;
+      }
+
+      .lds-roller {
+        padding-left: 110px;
+        padding-top: 225px;
+      }
+
+      .loading-state {
+        background-color: #e5f2ff;
+      }
+
+      .lds-roller div {
+        animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+        transform-origin: 40px 40px;
+      }
+      .lds-roller div:after {
+        content: " ";
+        display: block;
+        position: absolute;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: #0000a0;
+        margin: -4px 0 0 -4px;
+      }
+      .lds-roller div:nth-child(1) {
+        animation-delay: -0.036s;
+      }
+      .lds-roller div:nth-child(1):after {
+        top: 63px;
+        left: 63px;
+      }
+      .lds-roller div:nth-child(2) {
+        animation-delay: -0.072s;
+      }
+      .lds-roller div:nth-child(2):after {
+        top: 68px;
+        left: 56px;
+      }
+      .lds-roller div:nth-child(3) {
+        animation-delay: -0.108s;
+      }
+      .lds-roller div:nth-child(3):after {
+        top: 71px;
+        left: 48px;
+      }
+      .lds-roller div:nth-child(4) {
+        animation-delay: -0.144s;
+      }
+      .lds-roller div:nth-child(4):after {
+        top: 72px;
+        left: 40px;
+      }
+      .lds-roller div:nth-child(5) {
+        animation-delay: -0.18s;
+      }
+      .lds-roller div:nth-child(5):after {
+        top: 71px;
+        left: 32px;
+      }
+      .lds-roller div:nth-child(6) {
+        animation-delay: -0.216s;
+      }
+      .lds-roller div:nth-child(6):after {
+        top: 68px;
+        left: 24px;
+      }
+      .lds-roller div:nth-child(7) {
+        animation-delay: -0.252s;
+      }
+      .lds-roller div:nth-child(7):after {
+        top: 63px;
+        left: 17px;
+      }
+      .lds-roller div:nth-child(8) {
+        animation-delay: -0.288s;
+      }
+      .lds-roller div:nth-child(8):after {
+        top: 56px;
+        left: 12px;
+      }
+      @keyframes lds-roller {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .ad {
+        display: none;
+      }
+    </style>
+    <script type="text/javascript">
+      //Initialize Enabler
+      if (Enabler.isInitialized()) {
+        init();
+      } else {
+        Enabler.addEventListener(studio.events.StudioEvent.INIT, init);
+      }
+      //Run when Enabler is ready
+      function init() {
+        //politeInit();
+        //Load in Javascript
+        if (Enabler.isPageLoaded()) {
+          politeInit();
+        } else {
+          Enabler.addEventListener(
+            studio.events.StudioEvent.PAGE_LOADED,
+            politeInit
+          );
+        }
+      }
+      function politeInit() {
+        //Load in Javascript
+        const extJavascript = document.createElement("script");
+        extJavascript.setAttribute("type", "text/javascript");
+        extJavascript.setAttribute("src", Enabler.getUrl("initAnimation.js"));
+        document.getElementsByTagName("head")[0].appendChild(extJavascript);
+
+        //Load in CSS
+        const extCSS = document.createElement("link");
+        extCSS.setAttribute("rel", "stylesheet");
+        extCSS.setAttribute("type", "text/css");
+        extCSS.setAttribute("href", Enabler.getUrl("style.css"));
+        document.getElementsByTagName("head")[0].appendChild(extCSS);
+        document.getElementById("loading").style.display = "none";
+        document.getElementById("ad").style.display = "initial";
+      }
+
+	  function bgExitHandler(e) {
+        Enabler.exit("Background Exit");
+      }
+
+      document
+        .getElementById("bg-exit")
+        .addEventListener("click", bgExitHandler, false);
+
+    </script>
+  </head>
+
+  <body>
+    <div id="bg-exit" onclick="javascript:window.open(window.clickTag)">
+      <div id="loading" class="loading-state size pos">
+        <div class="lds-roller">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div id="ad" class="size pos ad">
+        <!-- <img src="poster.jpg" class="poster pos"> -->
+        <div id="videoContainer" class="pos">
+          <video id="video" autoplay muted playsinline webkit-playsinline>
+            <source src="300x600.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <p id="copy1" class="pos">YS-medlem?</p>
+        <p id="copy2" class="pos">
+          Sjekk hvor mye du kan spare<br />på å flytte lånet
+        </p>
+        <img
+          id="rentepil"
+          src="rentepil.svg"
+          class="pos"
+          alt="Boliglån fra 1,39 %"
+        />
+        <img
+          id="logo"
+          src="ND-logo-Hv-skygge.svg"
+          class="pos"
+          alt="Nordea Direct"
+        />
+        <img id="coBranding" src="ys-48sq--2x.png" class="pos" alt="YS logo" />
+        <img
+          id="ctapil"
+          src="cta-FlyttLanet.svg"
+          class="pos"
+          alt="Flytt lånet"
+        />
+        <p id="legal" class="pos">
+          Priseks.: Boliglån 50 % 2 mill., o/25 år, <br />
+          nom. rente 1,39 %, eff. rente 1,45 %, <br />
+          totalt: 2 383 732,-.
+        </p>
+        <div id="border" class="size pos"></div>
+      </div>
+    </div>
+  </body>
+</html>

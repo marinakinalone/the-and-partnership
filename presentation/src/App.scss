@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.header {
+    background-color: #fffaef;
+    border-bottom: 1px solid black;
+    text-align: center;
+    padding: 1rem;
+    .header-title {
+        font-family: 'Roboto Mono', monospace;
+    font-weight: normal;
+    }
+}
+
+.banners {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.intro__title {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 300;
+    margin-top: -2rem;
+    margin-left: 1rem; 
+    *{
+        text-decoration: none;
+        color: black;
+        &:hover {
+            color: rgb(58, 60, 223);
+        }
+    }
+
+}
+
+.banner {
+    height: 700px;
+    background-color: #ebebeb;
+    position: relative;
+    margin-top: 4rem;
+    border-radius: 15px;
+}
+
+#lexus-line {
+    width: 982px;
+}
+
+#nordea-fleet {
+    width: 580px;
+}
+
+#nordea-video {
+    width: 300px;
+}
+
+iframe {
+    border: none;
+    position: absolute;
+}
+
+.iframe__lexus-line {
+    top: 175px;
+}
+
+.iframe__nordea-fleet {
+    top: 120px;
+}
+
+.iframe__nordea-video {
+    top: 50px;
+}
