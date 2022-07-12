@@ -80,4 +80,70 @@ iframe {
 .iframe__nordea-video {
   top: 50px;
 }
+
+.presentation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.presentation__banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: -2rem;
+}
+
+.banner-fleet .banner {
+  height: 440px;
+}
+
+.banner-fleet .iframe__nordea-fleet {
+  top: 20px;
+}
+
+.presentation-details {
+  border-radius: 15px;
+  border: 1px solid black;
+  background-color: #fffbf2;
+  margin-top: 2rem;
+  width: 1000px;
+  padding: 1rem 2rem 2rem 2rem;
+  font-family: 'Roboto Mono', monospace;
+  line-height: 2rem;
+}
+
+.presentation-details p {
+  margin-bottom: 1rem;
+}
+
+.presentation-details h2 {
+  font-weight: normal;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.7rem;
+}
+
+.presentation-details details {
+  margin-bottom: 0.5rem;
+}
+
+.presentation-details details > summary {
+  font-weight: 500;
+}
+
+.presentation-details ul {
+  margin-left: 4rem;
+  margin-bottom: 1rem;
+}
 /*# sourceMappingURL=App.css.map */

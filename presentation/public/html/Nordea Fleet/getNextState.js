@@ -1,11 +1,11 @@
 const cars = [
-    {
-      image: "bil1.jpg",
-      model: "Citroën ë-Berlingo fra kr. 3.199,-",
-      bubble: "bubble1.png",
-      footer: "footer1.png",
-      footerInfo: "Inklusive frakt, lev. og reg.omk Oslo, Månedspris fra 3 199 kr. Etableringsgebyr: 1 990 kr. Totalpris: 265 931 kr vil variere med rentenivået. Priseksempel 5 års leasing: Startleie 72 001 kr / 60 mnd. / 100 000 km"
-    },
+  {
+    image: "bil1.jpg",
+    model: "Citroën ë-Berlingo fra kr. 3.199,-",
+    bubble: "bubble1.png",
+    footer: "footer1.png",
+    footerInfo: "Inklusive frakt, lev. og reg.omk Oslo, Månedspris fra 3 199 kr. Etableringsgebyr: 1 990 kr. Totalpris: 265 931 kr vil variere med rentenivået. Priseksempel 5 års leasing: Startleie 72 001 kr / 60 mnd. / 100 000 km"
+  },
     {
       image: "bil2.jpg",
       model: "Peugeot e-Expert fra kr. 3.499,-",
@@ -27,6 +27,7 @@ const cars = [
       footer: "footer4.png",
       footerInfo: "Inklusive frakt, lev. og reg.omk Oslo, Månedspris fra 3 499 kr. Etableringsgebyr: 1 990 kr. Totalpris: 307 925 kr vil variere med rentenivået. Priseksempel 5 års leasing: Startleie 95 995 kr / 60 mnd. / 100 000 km"
     },
+
   ];
 
   const displayTime = 5000;
