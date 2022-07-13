@@ -16,7 +16,7 @@ const LexusLine = () => {
     <main className="presentation">
     <section className="presentation__banner banner-lexus">
       <div className="banner" id="lexus-line">
-        <Banner id={lexusLine} title={"Lexus Line"} displayTitle={false} htmlFile={"/html/Lexus Line/index.html"} width={1000} height={400} />
+        <Banner id={lexusLine} title={"Lexus Line"} displayTitle={false} htmlFile={"/the-and-partnership/html/Lexus Line/index.html"} width={1000} height={400} />
       </div>
     </section>
     <section className="presentation-details">

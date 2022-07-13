@@ -7,7 +7,7 @@ function App() {
     <Router>
     <div className="App">
         <Routes>
-          <Route path="/" element={<Intro />} />
+          <Route path="/the-and-partnership" element={<Intro />} />
           <Route path="/nordea-fleet" element={<NordeaFleet />} />
           <Route path="/lexus-line" element={<LexusLine />} />
           <Route path="/nordea-video" element={<NordeaVideo />} />

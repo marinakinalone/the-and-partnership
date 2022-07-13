@@ -11,7 +11,7 @@ const NordeaFleet = () => {
     <main className="presentation">
     <section className="presentation__banner banner-fleet">
       <div className="banner" id={nordeaFleet}>
-        <Banner id={nordeaFleet} title={"Nordea Fleet"}  displayTitle={false} htmlFile={"/html/Nordea Fleet/index.html"} width={600} height={420} />
+        <Banner id={nordeaFleet} title={"Nordea Fleet"}  displayTitle={false} htmlFile={"/the-and-partnership/html/Nordea Fleet/index.html"} width={600} height={420} />
       </div>
     </section>
     <section className="presentation-details">

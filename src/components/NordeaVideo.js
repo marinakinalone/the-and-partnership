@@ -14,7 +14,7 @@ const NordeaVideo = () => {
     <main className="presentation">
     <section className="presentation__banner banner-video">
       <div className="banner" id={nordeaVideo}>
-      <Banner id={nordeaVideo} title={"Nordea Video"}  displayTitle={false} htmlFile={"/html/Nordea Video/index.html"} width={350} height={600} />
+      <Banner id={nordeaVideo} title={"Nordea Video"}  displayTitle={false} htmlFile={"/the-and-partnership/html/Nordea Video/index.html"} width={350} height={600} />
 
       </div>
     </section>
