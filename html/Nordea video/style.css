@@ -1,0 +1,83 @@
+@font-face {
+    font-family: "NDSansMed";
+    src: url("NDSansMed.woff") format("woff");
+  }
+  
+  .skygge {
+      -webkit-box-shadow: 0px 0px 19px 3px rgba(0,0,0,0.75);
+      -moz-box-shadow: 0px 0px 19px 3px rgba(0,0,0,0.75);
+      box-shadow: 0px 0px 19px 3px rgba(0,0,0,0.75);
+  }
+  
+  p {
+      opacity:1;
+      font-family: "NDSansMed", sans-serif;
+      font-weight: 400;
+      color: #0000A0;
+      font-size: 19px;
+      line-height: 22px;
+  }
+  
+  #border{
+      /* border: 1px #0000A0 solid; */
+      width: 300;
+      height: 600;
+      pointer-events: none;
+  }
+  
+  #logo {
+      left: 67px;
+      top: 0px;
+      width: 166px;
+      opacity:1;
+  }
+  
+  #videoContainer, #video, #poster {
+      right: 0px;
+      top: 0px;
+  }
+  
+  #rentepil{
+      left: 137px;
+      top: 280px;
+      width: 150px;
+      opacity:1;
+  }
+  
+  #ctapil{
+      left: 20px;
+      top: 488px;
+      opacity:0;
+      height: 32px;
+  }
+  
+  #coBranding {
+      right: 4px;
+      bottom: 4px;
+      width: 36px;
+  }
+  
+  #copy1, #copy2 {
+      left: 20px;
+      top: 408px;
+  }
+  
+  #legal {
+      left: 14px;
+      bottom: 0px;
+      width: 235px;
+      font-size: 10px;
+      line-height: 11px;
+  }
+  
+  #copy1{
+      opacity:1;
+  }
+  #copy2{
+      opacity:0;
+  }
+
+  #bg-exit {
+    cursor: pointer;
+    z-index: 1;
+  }
