@@ -1,4 +1,4 @@
-# THE-AND-PARTNERSHIP
+# The&Partnership
 A project made for a technical test with The&Partnership. A set of three tasks based on real briefs :)
 
 ## Built with 
