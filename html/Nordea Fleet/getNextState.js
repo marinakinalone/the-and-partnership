@@ -30,7 +30,7 @@ const cars = [
 
   ];
 
-  const displayTime = 2000;
+  const displayTime = 5000;
 
   const setImgSrc = (fileName, id, altText = "") => {
     const element = document.getElementById(id);
@@ -58,7 +58,7 @@ const cars = [
   };
 
   const setStateAnimation = (cars) => {
-    toggleClass(document.getElementById("bubble"), "bubble-4")
+    toggleClass(document.getElementById("bubble"), `bubble-${cars.length}`)
     getCarState(cars[0], 0);
     let i = 1;
     const changeState = () => {
