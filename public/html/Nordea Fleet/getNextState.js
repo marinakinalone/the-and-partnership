@@ -54,7 +54,6 @@ const cars = [
     setImgSrc(car.footer, "footer", car.footerInfo)
     setTimeout(() => {
         toggleClass(element, "tinRightIn")
-        console.log(element.className)
     }, displayTime - 100);
   };
 
@@ -64,7 +63,6 @@ const cars = [
     let i = 1;
     const changeState = () => {
       getCarState(cars[i], i);
-      console.log(i)
       i = (i + 1) % cars.length;
     };
     setInterval(changeState, displayTime);

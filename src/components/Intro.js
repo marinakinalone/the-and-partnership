@@ -18,7 +18,7 @@ const Intro = () => {
           <Banner id={lexusLine} title={"Lexus Line"}  displayTitle={true} htmlFile={"/the-and-partnership/html/Lexus Line/index.html"} width={1000} height={400} />
         </div>
         <div className="banner" id={nordeaVideo}>
-          <Banner id={nordeaVideo} title={"Nordea Video"}  displayTitle={true} htmlFile={"/the-and-partnership/html/Nordea Video/index.html"} width={350} height={600} />
+          <Banner id={nordeaVideo} title={"Nordea Video"}  displayTitle={true} htmlFile={"/the-and-partnership/html/Nordea video/index.html"} width={350} height={600} />
         </div> 
       </section>
     </>
