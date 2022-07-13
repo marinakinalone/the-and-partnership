@@ -182,20 +182,27 @@ var containerWidth;
 var copy1 = true;
 var moveLogo = false;
 
+
+
 // ADD NEW MESSAGES BELOW WITH THE LINE WIDTH
-const adHeadlines = [{
+ const adHeadlines = [
+    {
     content: "VÅR MEST POPULÆRE SUV",
-    lineWidth: "" // is set afterwards depending on containerWidth
-    },{
+    lineWidth: "300px"
+    },
+    {
     content: "FRA 3 890 I MÅNEDEN",
     lineWidth: "200px"
     }, {
     content: "OUR MOST POPULAR SUV",
     lineWidth: "265px"
-}]
-
-// ANIMATION WITH TWO MESSAGES, see function politeInit
-
+    },
+    // {
+    // content: "A COOL & STYLISH CAR",
+    // lineWidth: "240px"
+    // },
+]
+// CHANGE THE DISPLAY TIME BELOW
 const delayTime = 5 //default is 5
 
 function adAnimation (timeline, ads, lineWidth) {
@@ -399,7 +406,7 @@ else{
     console.log('contains')
     console.log(containerWidth)
     //var Ad_message_1_line_width = "'" + containerWidth + "'px"
-    startAnimation_Ad_message_2(containerWidth)
+    startAnimation_Ad_message_2(adHeadlines[0].lineWidth)
 }
 };
 

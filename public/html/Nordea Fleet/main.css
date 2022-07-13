@@ -108,8 +108,8 @@
 @keyframes tinRightIn {
   0% {
     opacity: 0;
-    -webkit-transform: scale(1, 1) translateX(900%);
-            transform: scale(1, 1) translateX(900%);
+    -webkit-transform: scale(1, 1) translateX(200%);
+            transform: scale(1, 1) translateX(200%);
   }
   90% {
     opacity: 1;

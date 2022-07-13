@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.header {
+  background-color: #fffaef;
+  border-bottom: 1px solid black;
+  text-align: center;
+  padding: 1rem;
+}
+
+.header .header-title {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: normal;
+}
+
+.banners {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.intro__title {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 300;
+  margin-top: -2rem;
+  margin-left: 1rem;
+}
+
+.intro__title * {
+  text-decoration: none;
+  color: black;
+}
+
+.intro__title *:hover {
+  color: #3a3cdf;
+}
+
+.banner {
+  height: 700px;
+  background-color: #ebebeb;
+  position: relative;
+  margin-top: 4rem;
+  border-radius: 15px;
+}
+
+#lexus-line {
+  width: 982px;
+}
+
+#nordea-fleet {
+  width: 580px;
+}
+
+#nordea-video {
+  width: 300px;
+}
+
+iframe {
+  border: none;
+  position: absolute;
+}
+
+.iframe__lexus-line {
+  top: 175px;
+}
+
+.iframe__nordea-fleet {
+  top: 120px;
+}
+
+.iframe__nordea-video {
+  top: 50px;
+}
+
+.presentation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.presentation__banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: -2rem;
+}
+
+.banner-fleet .banner {
+  height: 440px;
+}
+
+.banner-fleet .iframe__nordea-fleet {
+  top: 20px;
+}
+
+.banner-lexus .banner {
+  height: 340px;
+}
+
+.banner-lexus .iframe__lexus-line {
+  top: 20px;
+}
+
+.banner-video .banner {
+  height: 640px;
+}
+
+.banner-video .iframe__nordea-video {
+  top: 20px;
+}
+
+.presentation-details {
+  border-radius: 15px;
+  border: 1px solid black;
+  background-color: #fffbf2;
+  margin-top: 2rem;
+  width: 980px;
+  padding: 1rem 2rem 2rem 2rem;
+  font-family: 'Roboto Mono', monospace;
+  line-height: 2rem;
+}
+
+.presentation-details p {
+  margin-bottom: 1rem;
+}
+
+.presentation-details h2 {
+  font-weight: normal;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.7rem;
+}
+
+.presentation-details details {
+  margin-bottom: 0.5rem;
+}
+
+.presentation-details details > summary {
+  font-weight: 500;
+}
+
+.presentation-details ul {
+  margin-left: 4rem;
+  margin-bottom: 1rem;
+}
+
+.button__back {
+  font-family: 'Roboto Mono', monospace;
+  margin: 1rem 2rem;
+}
+
+.button__back * {
+  color: black;
+}
+
+.button__back *:hover {
+  color: #3a3cdf;
+}
+/*# sourceMappingURL=App.css.map */
