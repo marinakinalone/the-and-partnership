@@ -3,7 +3,7 @@ import Header from './Header'
 import { Link } from 'react-router-dom'
 
 const Intro = () => {
-  const headerContent = "The & Partnership - 13/07/2022  - Marina Kinalone Simonnet"
+  const headerContent = "The&Partnership - 13/07/2022  - Marina Kinalone Simonnet"
   return (
     <>
       <Header content={headerContent} />

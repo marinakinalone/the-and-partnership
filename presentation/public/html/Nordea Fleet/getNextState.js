@@ -30,7 +30,7 @@ const cars = [
 
   ];
 
-  const displayTime = 5000;
+  const displayTime = 2000;
 
   const setImgSrc = (fileName, id, altText = "") => {
     const element = document.getElementById(id);

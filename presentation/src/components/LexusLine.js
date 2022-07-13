@@ -1,5 +1,10 @@
 import React from 'react'
 import Header from './Header';
+import initImg1 from '../resources/lexusline functions before.png';
+import initImg2 from '../resources/lexusline functions before bis.png';
+import refactoredImg1 from '../resources/lexusline functions.png';
+import refactoredImg2 from '../resources/lexusline functions bis.png';
+import headlinesImg from '../resources/lexusline headlines.png';
 
 const LexusLine = () => {
   const headerContent = "Lexus Line"
@@ -14,26 +19,25 @@ const LexusLine = () => {
     </section>
     <section className="presentation-details">
       <h2>about the project</h2>
-      <p>To code a working banner based on a sketch. 1 format, 4 states.</p>
+      <p>Add an additionnal text state (and respect Lexus brand guidelines).</p>
       <details>
-        <summary>Code the banner's main template</summary>
-        <ul>
-          <li>export all the elements from adobe XD</li>
-          <li>use "developer's view" from adobe XD</li>
-          <li>implement a clicktag with Studio</li>
-        </ul>
+        <summary>Initial code (before)</summary>
+          <ul>
+            <li>adding a new text state and two lines: modifications in three places of the codebase, adding a dozen lines of code</li>
+            <li>easy to edit, but redundant and harder to maintain</li>
+          </ul>
+          <img src={initImg1} alt="" />
+          <img src={initImg2} alt="" />
       </details>
       <details>
-        <summary>Implement the logic to move from one state to another (using JavaScript)</summary>
-        <ul>
-          <li>flexibility and modularity</li>
-          <li>accessibility</li>
-        </ul>
-      </details>
-      <details>
-      
-        <summary>Add a "cool animation"</summary>
-        <a href="https://www.minimamente.com/project/magic/">Magic Library for CSS</a>
+        <summary>Refactored codebase (for more flexibility when adding a new text state)</summary>
+          <ul>
+            <li>more performant code (without redundancy)</li>
+            <li>easier modifications in just one place</li>
+          </ul>
+        <img src={headlinesImg} alt="" />
+        <img src={refactoredImg1} alt="" />
+        <img src={refactoredImg2} alt="" />
       </details>
     </section>
     </main>
