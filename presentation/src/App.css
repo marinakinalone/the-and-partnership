@@ -162,4 +162,17 @@ iframe {
   margin-left: 4rem;
   margin-bottom: 1rem;
 }
+
+.button__back {
+  font-family: 'Roboto Mono', monospace;
+  margin: 1rem 2rem;
+}
+
+.button__back * {
+  color: black;
+}
+
+.button__back *:hover {
+  color: #3a3cdf;
+}
 /*# sourceMappingURL=App.css.map */

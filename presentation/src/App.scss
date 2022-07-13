@@ -32,7 +32,7 @@
     font-weight: 300;
     margin-top: -2rem;
     margin-left: 1rem; 
-    *{
+    * {
         text-decoration: none;
         color: black;
         &:hover {
@@ -150,3 +150,16 @@ iframe {
     }
 }
 
+
+//BACK BUTTON 
+
+.button__back {
+    font-family: 'Roboto Mono', monospace;
+    margin: 1rem 2rem;
+    * {
+        color: black;
+        &:hover {
+            color: rgb(58, 60, 223);
+        }
+    }
+}

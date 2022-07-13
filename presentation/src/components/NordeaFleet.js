@@ -1,15 +1,17 @@
 import React from 'react'
-import Header from './Header';
+import {Banner, Header, BackButton } from './Index';
 
 const NordeaFleet = () => {
   const headerContent = "Nordea Fleet"
+  const nordeaFleet = "nordea-fleet"
   return (
     <>
     <Header content={headerContent} />
+    <BackButton />
     <main className="presentation">
     <section className="presentation__banner banner-fleet">
-      <div className="banner" id="nordea-fleet">
-          <iframe title="nordea-fleet" className="iframe__nordea-fleet" width="600" height="420" src="/html/Nordea Fleet/index.html"></iframe>
+      <div className="banner" id={nordeaFleet}>
+        <Banner id={nordeaFleet} title={"Nordea Fleet"}  displayTitle={false} htmlFile={"/html/Nordea Fleet/index.html"} width={600} height={420} />
       </div>
     </section>
     <section className="presentation-details">
@@ -33,7 +35,7 @@ const NordeaFleet = () => {
       <details>
       
         <summary>Add a "cool animation"</summary>
-        <a href="https://www.minimamente.com/project/magic/">Magic Library for CSS</a>
+        <a href="https://www.minimamente.com/project/magic/" target="_blank" rel="noreferrer">Magic Library for CSS</a>
       </details>
     </section>
     </main>
